@@ -1,0 +1,33 @@
+{
+  "hero": {
+    "badge": "Agents vocaux IA pour un support moderne",
+    "headline": "Améliorez l'expérience client avec synVoice",
+    "description": "Déployez des agents vocaux conversationnels qui répondent aux appels, résolvent les problèmes et ravissent les clients 24h/24, 7j/7—sans embauches supplémentaires.",
+    "bookDemo": "Réserver une démo",
+    "watchDemo": "Regarder la démo"
+  },
+  "navbar": {
+    "bookDemo": "Réserver une démo"
+  },
+  "usecases": {
+    "heading": "Cas d'usage clés",
+    "cards": {
+      "receptionist": {
+        "title": "Réceptionniste virtuel",
+        "description": "Accueille les appels entrants, fournit des informations et oriente les clients vers le bon service—idéal pour les salles de sport et les stades."
+      },
+      "reservation": {
+        "title": "Réservation de restaurant",
+        "description": "Prend les réservations, confirme la disponibilité et gère la liste d'attente automatiquement, 24h/24."
+      },
+      "scheduling": {
+        "title": "Planification de rendez-vous",
+        "description": "Permet aux patients ou clients de prendre, modifier ou annuler des rendez-vous sans intervention humaine."
+      },
+      "tracking": {
+        "title": "Suivi de commande",
+        "description": "Fournit des mises à jour de livraison en temps réel et gère les appels \"où est ma commande ?\" pour le e-commerce."
+      }
+    }
+  }
+} 

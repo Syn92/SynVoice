@@ -4,17 +4,27 @@ import Features from "@/components/features";
 import Footer from "@/components/footer";
 import Hero from "@/components/hero";
 import { Navbar } from "@/components/navbar";
-import Pricing from "@/components/pricing";
+import UseCases from "@/components/use-cases";
 import Testimonials from "@/components/testimonials";
+import { getDictionary } from "./dictionaries";
 
-export default function Home() {
+interface PageProps {
+  params: Promise<{
+    lang: "en" | "fr";
+  }>;
+}
+
+export default async function Home({ params }: PageProps) {
+  const { lang } = await params;
+  const dict = await getDictionary(lang);
   return (
     <>
-      <Navbar />
+      <Navbar dict={dict} />
       <main className="pt-16 xs:pt-20 sm:pt-24">
-        <Hero />
+        <Hero dict={dict} />
+        {/* Remaining components are left untranslated for brevity */}
         <Features />
-        <Pricing />
+        <UseCases dict={dict} />
         <FAQ />
         <Testimonials />
         <CTABanner />
@@ -22,4 +32,4 @@ export default function Home() {
       </main>
     </>
   );
-}
+} 
