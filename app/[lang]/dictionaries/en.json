@@ -1,0 +1,33 @@
+{
+  "hero": {
+    "badge": "AI Voice Agents for Modern Support",
+    "headline": "Elevate Customer Experience with synVoice",
+    "description": "Deploy conversational voice agents that answer calls, resolve issues, and delight customers 24/7—without hiring more staff.",
+    "bookDemo": "Book a Demo",
+    "watchDemo": "Watch Demo"
+  },
+  "navbar": {
+    "bookDemo": "Book a Demo"
+  },
+  "usecases": {
+    "heading": "Key Use Cases",
+    "cards": {
+      "receptionist": {
+        "title": "Virtual Receptionist",
+        "description": "Answer incoming calls, provide information and route customers to the right department—ideal for gyms, stadiums and sports venues."
+      },
+      "reservation": {
+        "title": "Restaurant Reservation",
+        "description": "Take bookings, confirm availability and manage wait-lists automatically, 24/7."
+      },
+      "scheduling": {
+        "title": "Appointment Scheduling",
+        "description": "Let patients or clients book, change or cancel appointments without speaking to a human agent."
+      },
+      "tracking": {
+        "title": "Order Tracking",
+        "description": "Provide real-time delivery updates and handle \"where is my order?\" calls for e-commerce businesses."
+      }
+    }
+  }
+} 

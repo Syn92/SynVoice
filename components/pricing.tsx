@@ -92,7 +92,7 @@ const Pricing = () => {
           </TabsTrigger>
         </TabsList>
       </Tabs>
-      <div className="mt-12 max-w-screen-lg mx-auto grid grid-cols-1 lg:grid-cols-3 items-center gap-8">
+      <div className="mt-12 max-w-(--breakpoint-lg) mx-auto grid grid-cols-1 lg:grid-cols-3 items-center gap-8">
         {plans.map((plan) => (
           <div
             key={plan.name}
