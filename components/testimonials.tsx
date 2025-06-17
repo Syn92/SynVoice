@@ -3,7 +3,6 @@ import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Carousel, CarouselApi, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import { cn } from "@/lib/utils";
 import { Star } from "lucide-react";
-import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
 interface TestimonialsProps {
