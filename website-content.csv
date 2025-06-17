@@ -1,0 +1,85 @@
+Section,Field,English,French
+Hero,badge,AI Voice Agents for Modern Support,Agents vocaux IA pour un support moderne
+Hero,headline,Elevate Customer Experience with synVoice,Améliorez l'expérience client avec synVoice
+Hero,description,"Deploy conversational voice agents that answer calls, resolve issues, and delight customers 24/7—without hiring more staff.","Déployez des agents vocaux conversationnels qui répondent aux appels, résolvent les problèmes et ravissent les clients 24h/24, 7j/7—sans embauches supplémentaires."
+Hero,bookDemo,Book a Demo,Réserver une démo
+Hero,watchDemo,Watch Demo,Regarder la démo
+Navbar,bookDemo,Book a Demo,Réserver une démo
+Navbar,navigation > features,Features,Fonctionnalités
+Navbar,navigation > useCases,Use Cases,Cas d'usage
+Navbar,navigation > faq,FAQ,FAQ
+Navbar,navigation > testimonials,Testimonials,Témoignages
+Usecases,heading,Key Use Cases,Cas d'usage clés
+Usecases,cards > receptionist > title,Virtual Receptionist,Réceptionniste virtuel
+Usecases,cards > receptionist > description,"Answer incoming calls, provide information and route customers to the right department—ideal for gyms, stadiums and sports venues.","Accueille les appels entrants, fournit des informations et oriente les clients vers le bon service—idéal pour les salles de sport et les stades."
+Usecases,cards > reservation > title,Restaurant Reservation,Réservation de restaurant
+Usecases,cards > reservation > description,"Take bookings, confirm availability and manage wait-lists automatically, 24/7.","Prend les réservations, confirme la disponibilité et gère la liste d'attente automatiquement, 24h/24."
+Usecases,cards > scheduling > title,Appointment Scheduling,Planification de rendez-vous
+Usecases,cards > scheduling > description,"Let patients or clients book, change or cancel appointments without speaking to a human agent.","Permet aux patients ou clients de prendre, modifier ou annuler des rendez-vous sans intervention humaine."
+Usecases,cards > tracking > title,Order Tracking,Suivi de commande
+Usecases,cards > tracking > description,"Provide real-time delivery updates and handle ""where is my order?"" calls for e-commerce businesses.","Fournit des mises à jour de livraison en temps réel et gère les appels ""où est ma commande ?"" pour le e-commerce."
+Features,heading,Why Choose SynVoice?,Pourquoi choisir SynVoice ?
+Features,cards > customizable > title,24/7 Availability,Disponibilité 24h/24
+Features,cards > customizable > description,"Your voice agents work around the clock, ensuring customers can reach support whenever they need it.","Vos agents vocaux travaillent en continu, garantissant que les clients peuvent accéder au support quand ils en ont besoin."
+Features,cards > interactive > title,Natural Conversations,Conversations naturelles
+Features,cards > interactive > description,AI-powered agents that understand context and provide human-like responses to customer inquiries.,Agents alimentés par IA qui comprennent le contexte et fournissent des réponses naturelles aux demandes clients.
+Features,cards > ai > title,Seamless Integration,Intégration transparente
+Features,cards > ai > description,"Connect with your existing CRM, booking systems, and databases for real-time information access.","Connectez-vous à votre CRM, systèmes de réservation et bases de données existants pour un accès en temps réel."
+Features,cards > media > title,Multi-Language Support,Support multilingue
+Features,cards > media > description,Serve customers in 30+ languages with native-level pronunciation and cultural understanding.,Servez les clients dans plus de 30 langues avec une prononciation native et une compréhension culturelle.
+Features,cards > analytics > title,Advanced Analytics,Analyses avancées
+Features,cards > analytics > description,"Track call metrics, customer satisfaction, and performance insights with detailed reporting.","Suivez les métriques d'appels, la satisfaction client et les insights de performance avec des rapports détaillés."
+Features,cards > collaboration > title,Instant Scalability,Évolutivité instantanée
+Features,cards > collaboration > description,Handle unlimited concurrent calls without hiring additional staff or expanding infrastructure.,Gérez des appels simultanés illimités sans embaucher de personnel supplémentaire ou étendre l'infrastructure.
+Testimonials,heading,Testimonials,Témoignages
+Testimonials,items [1] > name,John Doe,John Doe
+Testimonials,items [1] > designation,Operations Manager,Responsable des opérations
+Testimonials,items [1] > company,TechCorp,TechCorp
+Testimonials,items [1] > testimonial,SynVoice has transformed our customer service. We now handle 3x more calls with the same team size.,SynVoice a transformé notre service client. Nous gérons maintenant 3 fois plus d'appels avec la même équipe.
+Testimonials,items [2] > name,Sophia Lee,Sophia Lee
+Testimonials,items [2] > designation,Restaurant Owner,Propriétaire de restaurant
+Testimonials,items [2] > company,Bella Vista,Bella Vista
+Testimonials,items [2] > testimonial,Automated reservations have saved us hours daily. Our booking accuracy increased by 95%.,Les réservations automatisées nous font économiser des heures quotidiennement. Notre précision de réservation a augmenté de 95%.
+Testimonials,items [3] > name,Michael Johnson,Michael Johnson
+Testimonials,items [3] > designation,Clinic Director,Directeur de clinique
+Testimonials,items [3] > company,HealthFirst,HealthFirst
+Testimonials,items [3] > testimonial,Patients love the 24/7 appointment scheduling. No more missed calls or after-hours booking requests.,Les patients adorent la planification de rendez-vous 24h/24. Plus d'appels manqués ou de demandes de réservation après les heures.
+Testimonials,items [4] > name,Emily Davis,Emily Davis
+Testimonials,items [4] > designation,E-commerce Manager,Responsable e-commerce
+Testimonials,items [4] > company,ShopFast,ShopFast
+Testimonials,items [4] > testimonial,Order tracking calls dropped by 80%. Customers get instant updates without waiting on hold.,Les appels de suivi de commande ont chuté de 80%. Les clients obtiennent des mises à jour instantanées sans attendre.
+Testimonials,items [5] > name,Daniel Martinez,Daniel Martinez
+Testimonials,items [5] > designation,Gym Owner,Propriétaire de salle de sport
+Testimonials,items [5] > company,FitZone,FitZone
+Testimonials,items [5] > testimonial,Our virtual receptionist handles membership inquiries perfectly. Members get instant answers 24/7.,Notre réceptionniste virtuel gère parfaitement les demandes d'adhésion. Les membres obtiennent des réponses instantanées 24h/24.
+Testimonials,items [6] > name,Jane Smith,Jane Smith
+Testimonials,items [6] > designation,Customer Success Lead,Responsable succès client
+Testimonials,items [6] > company,InnovateX,InnovateX
+Testimonials,items [6] > testimonial,Implementation was seamless. We were live in 3 days with full CRM integration working perfectly.,L'implémentation était transparente. Nous étions opérationnels en 3 jours avec l'intégration CRM complète fonctionnant parfaitement.
+CtaBanner,heading,Ready to Transform Your Customer Experience?,Prêt à transformer votre expérience client ?
+CtaBanner,description,Join hundreds of businesses already using SynVoice to deliver exceptional voice support 24/7.,Rejoignez des centaines d'entreprises utilisant déjà SynVoice pour offrir un support vocal exceptionnel 24h/24.
+CtaBanner,primaryButton,Start Free Trial,Essai gratuit
+CtaBanner,secondaryButton,Book a Demo,Réserver une démo
+Footer,newsletter > title,Stay up to date,Restez informé
+Footer,newsletter > placeholder,Enter your email,Entrez votre email
+Footer,newsletter > button,Subscribe,S'abonner
+Footer,links > features,Features,Fonctionnalités
+Footer,links > pricing,Pricing,Tarification
+Footer,links > faq,FAQ,FAQ
+Footer,links > testimonials,Testimonials,Témoignages
+Footer,links > privacy,Privacy,Confidentialité
+Footer,copyright,All rights reserved.,Tous droits réservés.
+Faq,heading,Frequently Asked Questions,Foire aux questions
+Faq,subheading,Answers to the most common questions about SynVoice.,Les réponses aux questions les plus fréquentes sur SynVoice.
+Faq,items [1] > question,How long does it take to deploy a voice agent?,Combien de temps faut-il pour déployer un agent vocal ?
+Faq,items [1] > answer,Most customers go live in under a week using our pre-built templates and guided onboarding.,La plupart de nos clients sont opérationnels en moins d'une semaine grâce à nos modèles pré-configurés et un accompagnement guidé.
+Faq,items [2] > question,Can SynVoice integrate with our existing CRM?,SynVoice peut-il s'intégrer à notre CRM ?
+Faq,items [2] > answer,"Absolutely. We offer native connectors for Salesforce, HubSpot, and Zendesk, plus a REST API for custom integrations.","Absolument. Nous proposons des connecteurs natifs pour Salesforce, HubSpot et Zendesk, ainsi qu'une API REST pour les intégrations personnalisées."
+Faq,items [3] > question,How is usage billed?,Comment la consommation est-elle facturée ?
+Faq,items [3] > answer,"Plans include a pool of call minutes. If you exceed your quota, additional minutes are billed at a transparent per-minute rate.","Les forfaits incluent un nombre de minutes d'appel. Au-delà du quota, les minutes supplémentaires sont facturées à un tarif transparent par minute."
+Faq,items [4] > question,Is our data secure?,Nos données sont-elles en sécurité ?
+Faq,items [4] > answer,"Yes. We're GDPR compliant, use end-to-end encryption, and offer on-prem deployments for Enterprise clients.","Oui. Nous sommes conformes au RGPD, utilisons le chiffrement de bout en bout et proposons un déploiement sur site pour les clients Enterprise."
+Faq,items [5] > question,What languages do you support?,Quelles langues prenez-vous en charge ?
+Faq,items [5] > answer,"SynVoice currently supports 30+ languages, and we're adding more every quarter.",SynVoice prend actuellement en charge plus de 30 langues et nous en ajoutons chaque trimestre.
+Faq,items [6] > question,Can I try SynVoice before committing?,Puis-je essayer SynVoice avant de m'engager ?
+Faq,items [6] > answer,"Book a demo with our team—we'll set up a proof of concept tailored to your needs, free of charge.",Réservez une démo avec notre équipe : nous mettrons gratuitement en place une preuve de concept adaptée à vos besoins.

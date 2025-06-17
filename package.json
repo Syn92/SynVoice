@@ -6,7 +6,9 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export-content": "node scripts/generate-content-csv.js",
+    "import-content": "node scripts/import-from-csv.js"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.11",
@@ -21,6 +23,7 @@
     "@vercel/analytics": "^1.5.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "csv-parse": "^5.6.0",
     "embla-carousel-react": "^8.6.0",
     "framer-motion": "^12.18.1",
     "lucide-react": "^0.475.0",
