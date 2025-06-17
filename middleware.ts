@@ -14,8 +14,12 @@ function getLocale(request: NextRequest): string {
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  // Skip next internal paths
-  if (pathname.startsWith("/_next") || pathname.startsWith("/api")) {
+  // Skip next internal paths and static assets
+  if (
+    pathname.startsWith("/_next") || 
+    pathname.startsWith("/api") ||
+    pathname.includes(".") // Skip files with extensions (images, etc.)
+  ) {
     return;
   }
 

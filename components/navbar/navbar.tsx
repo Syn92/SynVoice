@@ -3,16 +3,24 @@ import { Logo } from "./logo";
 import { NavMenu } from "./nav-menu";
 import { NavigationSheet } from "./navigation-sheet";
 import ThemeToggle from "../theme-toggle";
+import LanguageSwitcher from "./language-switcher";
 
 interface NavbarProps {
+  lang: "en" | "fr";
   dict: {
     navbar: {
       bookDemo: string;
+      navigation: {
+        features: string;
+        useCases: string;
+        faq: string;
+        testimonials: string;
+      };
     };
   };
 }
 
-const Navbar = ({ dict }: NavbarProps) => {
+const Navbar = ({ lang, dict }: NavbarProps) => {
   const { bookDemo } = dict.navbar ?? {};
 
   return (
@@ -21,15 +29,16 @@ const Navbar = ({ dict }: NavbarProps) => {
         <Logo />
 
         {/* Desktop Menu */}
-        <NavMenu className="hidden md:block" />
+        <NavMenu dict={dict} className="hidden md:block" />
 
         <div className="flex items-center gap-3">
           <ThemeToggle />
+          <LanguageSwitcher current={lang} />
           <Button className="hidden xs:inline-flex">{bookDemo}</Button>
 
           {/* Mobile Menu */}
           <div className="md:hidden">
-            <NavigationSheet />
+            <NavigationSheet dict={dict} />
           </div>
         </div>
       </div>

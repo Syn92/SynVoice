@@ -2,7 +2,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight, CirclePlay } from "lucide-react";
 import React from "react";
-import LogoCloud from "./logo-cloud";
+import ScrollReveal from "./scroll-reveal";
 
 interface HeroProps {
   dict: {
@@ -21,36 +21,55 @@ const Hero = ({ dict }: HeroProps) => {
     dict.hero ?? {};
 
   return (
-    <div className="min-h-[calc(100vh-6rem)] flex flex-col items-center py-20 px-6">
+    <div className="min-h-[calc(100vh-6rem)] flex flex-col items-center py-10 px-6">
       <div className="md:mt-6 flex items-center justify-center">
         <div className="text-center max-w-2xl">
-          <Badge className="bg-primary rounded-full py-1 border-none">
-            {badge}
-          </Badge>
-          <h1 className="mt-6 max-w-[20ch] text-3xl xs:text-4xl sm:text-5xl md:text-6xl font-bold leading-[1.2]! tracking-tight">
-            {headline}
-          </h1>
-          <p className="mt-6 max-w-[60ch] xs:text-lg">
-            {description}
-          </p>
-          <div className="mt-12 flex flex-col sm:flex-row items-center sm:justify-center gap-4">
-            <Button
-              size="lg"
-              className="w-full sm:w-auto rounded-full text-base"
-            >
-              {bookDemo} <ArrowUpRight className="h-5! w-5!" />
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="w-full sm:w-auto rounded-full text-base shadow-none"
-            >
-              <CirclePlay className="h-5! w-5!" /> {watchDemo}
-            </Button>
-          </div>
+          <ScrollReveal delay={0.1}>
+            <Badge className="bg-primary rounded-full py-1 border-none">
+              {badge}
+            </Badge>
+          </ScrollReveal>
+          <ScrollReveal delay={0.2}>
+            <h1 className="mt-6 max-w-[20ch] text-3xl xs:text-4xl sm:text-5xl md:text-6xl font-bold leading-[1.2]! tracking-tight">
+              {headline}
+            </h1>
+          </ScrollReveal>
+          <ScrollReveal delay={0.3}>
+            <p className="mt-6 max-w-[60ch] xs:text-lg">
+              {description}
+            </p>
+          </ScrollReveal>
+          <ScrollReveal delay={0.4}>
+            <div className="mt-12 flex flex-col sm:flex-row items-center sm:justify-center gap-4">
+              <Button
+                size="lg"
+                className="w-full sm:w-auto rounded-full text-base"
+              >
+                {bookDemo} <ArrowUpRight className="h-5! w-5!" />
+              </Button>
+              <Button
+                variant="outline"
+                size="lg"
+                className="w-full sm:w-auto rounded-full text-base shadow-none"
+              >
+                <CirclePlay className="h-5! w-5!" /> {watchDemo}
+              </Button>
+            </div>
+          </ScrollReveal>
         </div>
       </div>
-      <LogoCloud className="mt-24 max-w-3xl mx-auto" />
+      <ScrollReveal delay={0.6}>
+        <div className="mt-24 max-w-5xl mx-auto px-4">
+          <div className="relative">
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-primary/10 rounded-2xl blur-3xl transform scale-105"></div>
+            <img 
+              src="/hero2.png" 
+              alt="Dashboard Preview" 
+              className="relative w-full h-auto rounded-2xl shadow-[0_25px_80px_-15px_rgba(0,0,0,0.4)] border border-border/50 backdrop-blur-sm"
+            />
+          </div>
+        </div>
+      </ScrollReveal>
     </div>
   );
 };

@@ -4,7 +4,21 @@ import { Menu } from "lucide-react";
 import { Logo } from "./logo";
 import { NavMenu } from "./nav-menu";
 
-export const NavigationSheet = () => {
+interface NavigationSheetProps {
+  dict: {
+    navbar: {
+      bookDemo: string;
+      navigation: {
+        features: string;
+        useCases: string;
+        faq: string;
+        testimonials: string;
+      };
+    };
+  };
+}
+
+export const NavigationSheet = ({ dict }: NavigationSheetProps) => {
   return (
     <Sheet>
       <SheetTrigger asChild>
@@ -14,10 +28,10 @@ export const NavigationSheet = () => {
       </SheetTrigger>
       <SheetContent>
         <Logo />
-        <NavMenu orientation="vertical" className="mt-12" />
+        <NavMenu dict={dict} orientation="vertical" className="mt-12" />
 
         <div className="mt-8">
-          <Button className="w-full">Book a Demo</Button>
+          <Button className="w-full">{dict.navbar.bookDemo}</Button>
         </div>
       </SheetContent>
     </Sheet>

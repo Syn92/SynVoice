@@ -7,7 +7,13 @@
     "watchDemo": "Watch Demo"
   },
   "navbar": {
-    "bookDemo": "Book a Demo"
+    "bookDemo": "Book a Demo",
+    "navigation": {
+      "features": "Features",
+      "useCases": "Use Cases",
+      "faq": "FAQ",
+      "testimonials": "Testimonials"
+    }
   },
   "usecases": {
     "heading": "Key Use Cases",
@@ -29,5 +35,126 @@
         "description": "Provide real-time delivery updates and handle \"where is my order?\" calls for e-commerce businesses."
       }
     }
+  },
+  "features": {
+    "heading": "Why Choose SynVoice?",
+    "cards": {
+      "customizable": {
+        "title": "24/7 Availability",
+        "description": "Your voice agents work around the clock, ensuring customers can reach support whenever they need it."
+      },
+      "interactive": {
+        "title": "Natural Conversations",
+        "description": "AI-powered agents that understand context and provide human-like responses to customer inquiries."
+      },
+      "ai": {
+        "title": "Seamless Integration",
+        "description": "Connect with your existing CRM, booking systems, and databases for real-time information access."
+      },
+      "media": {
+        "title": "Multi-Language Support",
+        "description": "Serve customers in 30+ languages with native-level pronunciation and cultural understanding."
+      },
+      "analytics": {
+        "title": "Advanced Analytics",
+        "description": "Track call metrics, customer satisfaction, and performance insights with detailed reporting."
+      },
+      "collaboration": {
+        "title": "Instant Scalability",
+        "description": "Handle unlimited concurrent calls without hiring additional staff or expanding infrastructure."
+      }
+    }
+  },
+  "testimonials": {
+    "heading": "Testimonials",
+    "items": [
+      {
+        "name": "John Doe",
+        "designation": "Operations Manager",
+        "company": "TechCorp",
+        "testimonial": "SynVoice has transformed our customer service. We now handle 3x more calls with the same team size."
+      },
+      {
+        "name": "Sophia Lee",
+        "designation": "Restaurant Owner",
+        "company": "Bella Vista",
+        "testimonial": "Automated reservations have saved us hours daily. Our booking accuracy increased by 95%."
+      },
+      {
+        "name": "Michael Johnson",
+        "designation": "Clinic Director",
+        "company": "HealthFirst",
+        "testimonial": "Patients love the 24/7 appointment scheduling. No more missed calls or after-hours booking requests."
+      },
+      {
+        "name": "Emily Davis",
+        "designation": "E-commerce Manager",
+        "company": "ShopFast",
+        "testimonial": "Order tracking calls dropped by 80%. Customers get instant updates without waiting on hold."
+      },
+      {
+        "name": "Daniel Martinez",
+        "designation": "Gym Owner",
+        "company": "FitZone",
+        "testimonial": "Our virtual receptionist handles membership inquiries perfectly. Members get instant answers 24/7."
+      },
+      {
+        "name": "Jane Smith",
+        "designation": "Customer Success Lead",
+        "company": "InnovateX",
+        "testimonial": "Implementation was seamless. We were live in 3 days with full CRM integration working perfectly."
+      }
+    ]
+  },
+  "ctaBanner": {
+    "heading": "Ready to Transform Your Customer Experience?",
+    "description": "Join hundreds of businesses already using SynVoice to deliver exceptional voice support 24/7.",
+    "primaryButton": "Start Free Trial",
+    "secondaryButton": "Book a Demo"
+  },
+  "footer": {
+    "newsletter": {
+      "title": "Stay up to date",
+      "placeholder": "Enter your email",
+      "button": "Subscribe"
+    },
+    "links": {
+      "features": "Features",
+      "pricing": "Pricing",
+      "faq": "FAQ",
+      "testimonials": "Testimonials",
+      "privacy": "Privacy"
+    },
+    "copyright": "All rights reserved."
+  },
+  "faq": {
+    "heading": "Frequently Asked Questions",
+    "subheading": "Answers to the most common questions about SynVoice.",
+    "items": [
+      {
+        "question": "How long does it take to deploy a voice agent?",
+        "answer": "Most customers go live in under a week using our pre-built templates and guided onboarding."
+      },
+      {
+        "question": "Can SynVoice integrate with our existing CRM?",
+        "answer": "Absolutely. We offer native connectors for Salesforce, HubSpot, and Zendesk, plus a REST API for custom integrations."
+      },
+      {
+        "question": "How is usage billed?",
+        "answer": "Plans include a pool of call minutes. If you exceed your quota, additional minutes are billed at a transparent per-minute rate."
+      },
+      {
+        "question": "Is our data secure?",
+        "answer": "Yes. We're GDPR compliant, use end-to-end encryption, and offer on-prem deployments for Enterprise clients."
+      },
+      {
+        "question": "What languages do you support?",
+        "answer": "SynVoice currently supports 30+ languages, and we're adding more every quarter."
+      },
+      {
+        "question": "Can I try SynVoice before committing?",
+        "answer": "Book a demo with our team—we'll set up a proof of concept tailored to your needs, free of charge."
+      }
+    ]
   }
 } 

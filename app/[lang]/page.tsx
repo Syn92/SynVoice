@@ -19,16 +19,15 @@ export default async function Home({ params }: PageProps) {
   const dict = await getDictionary(lang);
   return (
     <>
-      <Navbar dict={dict} />
+      <Navbar dict={dict} lang={lang} />
       <main className="pt-16 xs:pt-20 sm:pt-24">
         <Hero dict={dict} />
-        {/* Remaining components are left untranslated for brevity */}
-        <Features />
+        <Features dict={dict} />
         <UseCases dict={dict} />
-        <FAQ />
-        <Testimonials />
-        <CTABanner />
-        <Footer />
+        <FAQ dict={dict} />
+        <Testimonials dict={dict} />
+        <CTABanner dict={dict} />
+        <Footer dict={dict} />
       </main>
     </>
   );

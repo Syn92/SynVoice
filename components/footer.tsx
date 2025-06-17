@@ -9,30 +9,50 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 
-const footerLinks = [
-  {
-    title: "Features",
-    href: "#features",
-  },
-  {
-    title: "Pricing",
-    href: "#pricing",
-  },
-  {
-    title: "FAQ",
-    href: "#faq",
-  },
-  {
-    title: "Testimonials",
-    href: "#testimonials",
-  },
-  {
-    title: "Privacy",
-    href: "#privacy",
-  },
-];
+interface FooterProps {
+  dict: {
+    footer: {
+      newsletter: {
+        title: string;
+        placeholder: string;
+        button: string;
+      };
+      links: {
+        features: string;
+        pricing: string;
+        faq: string;
+        testimonials: string;
+        privacy: string;
+      };
+      copyright: string;
+    };
+  };
+}
 
-const Footer = () => {
+const Footer = ({ dict }: FooterProps) => {
+  const footerLinks = [
+    {
+      title: dict.footer.links.features,
+      href: "#features",
+    },
+    {
+      title: dict.footer.links.pricing,
+      href: "#pricing",
+    },
+    {
+      title: dict.footer.links.faq,
+      href: "#faq",
+    },
+    {
+      title: dict.footer.links.testimonials,
+      href: "#testimonials",
+    },
+    {
+      title: dict.footer.links.privacy,
+      href: "#privacy",
+    },
+  ];
+
   return (
     <footer className="dark:border-t mt-40 dark bg-background text-foreground">
       <div className="max-w-(--breakpoint-xl) mx-auto">
@@ -73,10 +93,10 @@ const Footer = () => {
 
           {/* Subscribe Newsletter */}
           <div className="max-w-xs w-full">
-            <h6 className="font-semibold">Stay up to date</h6>
+            <h6 className="font-semibold">{dict.footer.newsletter.title}</h6>
             <form className="mt-6 flex items-center gap-2">
-              <Input type="email" placeholder="Enter your email" />
-              <Button>Subscribe</Button>
+              <Input type="email" placeholder={dict.footer.newsletter.placeholder} />
+              <Button>{dict.footer.newsletter.button}</Button>
             </form>
           </div>
         </div>
@@ -86,9 +106,9 @@ const Footer = () => {
           <span className="text-muted-foreground text-center sm:text-start">
             &copy; {new Date().getFullYear()}{" "}
             <Link href="/" target="_blank">
-              Shadcn UI Blocks
+              SynVoice
             </Link>
-            . All rights reserved.
+            . {dict.footer.copyright}
           </span>
 
           <div className="flex items-center gap-5 text-muted-foreground">
