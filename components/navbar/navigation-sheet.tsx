@@ -1,8 +1,12 @@
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
+import { Separator } from "@/components/ui/separator";
 import { Menu } from "lucide-react";
 import { Logo } from "./logo";
 import { NavMenu } from "./nav-menu";
+import LanguageSwitcher from "./language-switcher";
+import ThemeToggle from "../theme-toggle";
+import Link from "next/link";
 
 interface NavigationSheetProps {
   dict: {
@@ -16,9 +20,11 @@ interface NavigationSheetProps {
       };
     };
   };
+  lang: 'en' | 'fr';
+  isHomePage?: boolean;
 }
 
-export const NavigationSheet = ({ dict }: NavigationSheetProps) => {
+export const NavigationSheet = ({ dict, lang, isHomePage = false }: NavigationSheetProps) => {
   return (
     <Sheet>
       <SheetTrigger asChild>
@@ -26,12 +32,30 @@ export const NavigationSheet = ({ dict }: NavigationSheetProps) => {
           <Menu />
         </Button>
       </SheetTrigger>
-      <SheetContent>
-        <Logo />
-        <NavMenu dict={dict} orientation="vertical" className="mt-12" />
+      <SheetContent className="w-[300px] sm:w-[400px]">
+        <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
+        <div className="flex flex-col h-full">
+          <Logo />
+          
+          <NavMenu dict={dict} lang={lang} isHomePage={isHomePage} orientation="vertical" className="mt-12" />
 
-        <div className="mt-8">
-          <Button className="w-full">{dict.navbar.bookDemo}</Button>
+          <Separator className="my-6" />
+          
+          <div className="space-y-4">
+            <Button asChild className="w-full">
+              <Link href={`/${lang}/contact`}>{dict.navbar.bookDemo}</Link>
+            </Button>
+            
+            <div className="flex items-center justify-between">
+              <span className="text-sm font-medium">Language</span>
+              <LanguageSwitcher current={lang} />
+            </div>
+            
+            <div className="flex items-center justify-between">
+              <span className="text-sm font-medium">Theme</span>
+              <ThemeToggle />
+            </div>
+          </div>
         </div>
       </SheetContent>
     </Sheet>

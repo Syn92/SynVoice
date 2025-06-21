@@ -18,31 +18,39 @@ interface NavMenuProps extends NavigationMenuProps {
       };
     };
   };
+  lang: 'en' | 'fr';
+  isHomePage?: boolean;
 }
 
-export const NavMenu = ({ dict, ...props }: NavMenuProps) => (
-  <NavigationMenu {...props}>
-    <NavigationMenuList className="gap-6 space-x-0 data-[orientation=vertical]:flex-col data-[orientation=vertical]:items-start">
-      <NavigationMenuItem>
-        <NavigationMenuLink asChild>
-          <Link href="#features">{dict.navbar.navigation.features}</Link>
-        </NavigationMenuLink>
-      </NavigationMenuItem>
-      <NavigationMenuItem>
-        <NavigationMenuLink asChild>
-          <Link href="#usecases">{dict.navbar.navigation.useCases}</Link>
-        </NavigationMenuLink>
-      </NavigationMenuItem>
-      <NavigationMenuItem>
-        <NavigationMenuLink asChild>
-          <Link href="#faq">{dict.navbar.navigation.faq}</Link>
-        </NavigationMenuLink>
-      </NavigationMenuItem>
-      <NavigationMenuItem>
-        <NavigationMenuLink asChild>
-          <Link href="#testimonials">{dict.navbar.navigation.testimonials}</Link>
-        </NavigationMenuLink>
-      </NavigationMenuItem>
-    </NavigationMenuList>
-  </NavigationMenu>
-);
+export const NavMenu = ({ dict, lang, isHomePage = false, ...props }: NavMenuProps) => {
+  const getNavLink = (anchor: string) => {
+    return isHomePage ? `#${anchor}` : `/${lang}#${anchor}`;
+  };
+
+  return (
+    <NavigationMenu {...props}>
+      <NavigationMenuList className="gap-6 space-x-0 data-[orientation=vertical]:flex-col data-[orientation=vertical]:items-start">
+        <NavigationMenuItem>
+          <NavigationMenuLink asChild>
+            <Link href={getNavLink('features')}>{dict.navbar.navigation.features}</Link>
+          </NavigationMenuLink>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <NavigationMenuLink asChild>
+            <Link href={getNavLink('usecases')}>{dict.navbar.navigation.useCases}</Link>
+          </NavigationMenuLink>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <NavigationMenuLink asChild>
+            <Link href={getNavLink('faq')}>{dict.navbar.navigation.faq}</Link>
+          </NavigationMenuLink>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <NavigationMenuLink asChild>
+            <Link href={getNavLink('testimonials')}>{dict.navbar.navigation.testimonials}</Link>
+          </NavigationMenuLink>
+        </NavigationMenuItem>
+      </NavigationMenuList>
+    </NavigationMenu>
+  );
+};

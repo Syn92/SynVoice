@@ -8,6 +8,7 @@ import {
   TwitterIcon,
 } from "lucide-react";
 import Link from "next/link";
+import ThemeToggle from "./theme-toggle";
 
 interface FooterProps {
   dict: {
@@ -124,6 +125,9 @@ const Footer = ({ dict }: FooterProps) => {
             <Link href="#" target="_blank">
               <GithubIcon className="h-5 w-5" />
             </Link>
+            <div className="hidden md:block">
+              <ThemeToggle />
+            </div>
           </div>
         </div>
       </div>

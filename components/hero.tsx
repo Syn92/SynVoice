@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowUpRight, CirclePlay } from "lucide-react";
 import React from "react";
 import ScrollReveal from "./scroll-reveal";
+import Image from "next/image";
 
 interface HeroProps {
   dict: {
@@ -62,9 +63,12 @@ const Hero = ({ dict }: HeroProps) => {
         <div className="mt-24 max-w-5xl mx-auto px-4">
           <div className="relative">
             <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-primary/10 rounded-2xl blur-3xl transform scale-105"></div>
-            <img 
+            <Image 
               src="/hero2.png" 
               alt="Dashboard Preview" 
+              width={1200}
+              height={675}
+              priority
               className="relative w-full h-auto rounded-2xl shadow-[0_25px_80px_-15px_rgba(0,0,0,0.4)] border border-border/50 backdrop-blur-sm"
             />
           </div>

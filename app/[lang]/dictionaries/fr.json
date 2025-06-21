@@ -1,13 +1,13 @@
 {
   "hero": {
-    "badge": "Agents vocaux IA pour un support moderne",
-    "headline": "Améliorez l'expérience client avec synVoice",
-    "description": "Déployez des agents vocaux conversationnels qui répondent aux appels, résolvent les problèmes et ravissent les clients 24h/24, 7j/7—sans embauches supplémentaires.",
-    "bookDemo": "Réserver une démo",
-    "watchDemo": "Regarder la démo"
+    "badge": "Agents vocaux intelligents pour votre entreprise",
+    "headline": "Répondez, réservez, fidélisez—avec l'IA",
+    "description": "SynVoice conçoit et intègre des agents vocaux IA pour gérer les appels, les réservations et les rendez-vous, vous laissant vous concentrer sur votre cœur de métier.",
+    "bookDemo": "Demandez votre démo",
+    "watchDemo": "Regardez notre démo"
   },
   "navbar": {
-    "bookDemo": "Réserver une démo",
+    "bookDemo": "Demandez votre démo",
     "navigation": {
       "features": "Fonctionnalités",
       "useCases": "Cas d'usage",
@@ -108,7 +108,7 @@
   },
   "ctaBanner": {
     "heading": "Prêt à transformer votre expérience client ?",
-    "description": "Rejoignez des centaines d'entreprises utilisant déjà SynVoice pour offrir un support vocal exceptionnel 24h/24.",
+    "description": "SynVoice conçoit et intègre des agents vocaux IA pour gérer les appels, les réservations et les rendez-vous, vous laissant vous concentrer sur votre cœur de métier.",
     "primaryButton": "Essai gratuit",
     "secondaryButton": "Réserver une démo"
   },
@@ -156,5 +156,26 @@
         "answer": "Réservez une démo avec notre équipe : nous mettrons gratuitement en place une preuve de concept adaptée à vos besoins."
       }
     ]
+  },
+  "contact": {
+    "heading": "Contactez-nous",
+    "subheading": "Prêt à transformer votre expérience client ? Contactez-nous dès aujourd'hui.",
+    "form": {
+      "firstName": "Prénom",
+      "lastName": "Nom",
+      "email": "E-mail",
+      "phone": "Téléphone",
+      "company": "Société",
+      "website": "Site Web",
+      "message": "Votre message",
+      "submit": "Soumettre",
+      "reset": "Re-paramétrer",
+      "required": "*",
+      "success": "Merci pour votre message. Nous vous répondrons bientôt !",
+      "validation": {
+        "required": "{field} ne peut pas être vide",
+        "email": "Veuillez entrer une adresse e-mail valide"
+      }
+    }
   }
-} 
+}

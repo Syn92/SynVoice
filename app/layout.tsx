@@ -20,11 +20,13 @@ export default function RootLayout({
           <TooltipProvider>{children}</TooltipProvider>
         </ThemeProvider>
         <Analytics />
-        <div
+        {/* ElevenLabs Voice Widget - Desktop Only */}
+        <div 
+          className="hidden lg:block"
           dangerouslySetInnerHTML={{
             __html: `<elevenlabs-convai agent-id="agent_01jx4551bjekqsq5m5pv51nek9"></elevenlabs-convai><script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>`,
           }}
-        ></div>
+        />
       </body>
     </html>
   );

@@ -2,8 +2,8 @@ import { Button } from "@/components/ui/button";
 import { Logo } from "./logo";
 import { NavMenu } from "./nav-menu";
 import { NavigationSheet } from "./navigation-sheet";
-import ThemeToggle from "../theme-toggle";
 import LanguageSwitcher from "./language-switcher";
+import Link from "next/link";
 
 interface NavbarProps {
   lang: "en" | "fr";
@@ -18,9 +18,10 @@ interface NavbarProps {
       };
     };
   };
+  isHomePage?: boolean;
 }
 
-const Navbar = ({ lang, dict }: NavbarProps) => {
+const Navbar = ({ lang, dict, isHomePage = false }: NavbarProps) => {
   const { bookDemo } = dict.navbar ?? {};
 
   return (
@@ -29,16 +30,20 @@ const Navbar = ({ lang, dict }: NavbarProps) => {
         <Logo />
 
         {/* Desktop Menu */}
-        <NavMenu dict={dict} className="hidden md:block" />
+        <NavMenu dict={dict} lang={lang} isHomePage={isHomePage} className="hidden lg:block" />
 
         <div className="flex items-center gap-3">
-          <ThemeToggle />
-          <LanguageSwitcher current={lang} />
-          <Button className="hidden xs:inline-flex">{bookDemo}</Button>
+          {/* Desktop elements */}
+          <div className="hidden lg:flex items-center gap-3">
+            <LanguageSwitcher current={lang} />
+            <Button asChild>
+              <Link href={`/${lang}/contact`}>{bookDemo}</Link>
+            </Button>
+          </div>
 
           {/* Mobile Menu */}
-          <div className="md:hidden">
-            <NavigationSheet dict={dict} />
+          <div className="lg:hidden">
+            <NavigationSheet dict={dict} lang={lang} isHomePage={isHomePage} />
           </div>
         </div>
       </div>

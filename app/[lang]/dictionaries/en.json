@@ -1,13 +1,13 @@
 {
   "hero": {
-    "badge": "AI Voice Agents for Modern Support",
-    "headline": "Elevate Customer Experience with synVoice",
-    "description": "Deploy conversational voice agents that answer calls, resolve issues, and delight customers 24/7—without hiring more staff.",
-    "bookDemo": "Book a Demo",
-    "watchDemo": "Watch Demo"
+    "badge": "Smart Voice Agents for Your Business",
+    "headline": "Answer, Book, Delight—Powered by AI",
+    "description": "SynVoice designs and integrates AI voice agents to handle calls, bookings, and reservations, allowing you to focus on what matters most.",
+    "bookDemo": "Request Your Demo",
+    "watchDemo": "Watch Our Demo"
   },
   "navbar": {
-    "bookDemo": "Book a Demo",
+    "bookDemo": "Request Your Demo",
     "navigation": {
       "features": "Features",
       "useCases": "Use Cases",
@@ -108,7 +108,7 @@
   },
   "ctaBanner": {
     "heading": "Ready to Transform Your Customer Experience?",
-    "description": "Join hundreds of businesses already using SynVoice to deliver exceptional voice support 24/7.",
+    "description": "SynVoice designs and integrates AI voice agents to handle calls, bookings, and reservations, allowing you to focus on what matters most.",
     "primaryButton": "Start Free Trial",
     "secondaryButton": "Book a Demo"
   },
@@ -156,5 +156,26 @@
         "answer": "Book a demo with our team—we'll set up a proof of concept tailored to your needs, free of charge."
       }
     ]
+  },
+  "contact": {
+    "heading": "Get in Touch",
+    "subheading": "Ready to transform your customer experience? Contact us today.",
+    "form": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email",
+      "phone": "Phone",
+      "company": "Company",
+      "website": "Website",
+      "message": "Your Message",
+      "submit": "Submit",
+      "reset": "Reset",
+      "required": "*",
+      "success": "Thank you for your message. We'll get back to you soon!",
+      "validation": {
+        "required": "{field} is required",
+        "email": "Please enter a valid email address"
+      }
+    }
   }
-} 
+}

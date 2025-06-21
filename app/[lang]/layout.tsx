@@ -7,9 +7,9 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "PureLanding - Beautiful Shadcn UI Landing Page",
+  title: "SynVoice - Voice Agent Implementation Consulting",
   description:
-    "A beautiful landing page built with Shadcn UI, Next.js 15, Tailwind CSS, and Shadcn UI Blocks.",
+    "Expert consulting services to implement intelligent voice agents for your business. Transform customer interactions with AI-powered voice solutions.",
   openGraph: {
     type: "website",
   },
