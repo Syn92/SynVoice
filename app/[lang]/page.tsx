@@ -6,6 +6,7 @@ import Hero from "@/components/hero";
 import { Navbar } from "@/components/navbar";
 import UseCases from "@/components/use-cases";
 import Testimonials from "@/components/testimonials";
+import BookingIframe from "@/components/booking-iframe";
 import { getDictionary } from "./dictionaries";
 
 interface PageProps {
@@ -27,7 +28,10 @@ export default async function Home({ params }: PageProps) {
         <FAQ dict={dict} />
         <Testimonials dict={dict} />
         <CTABanner dict={dict} />
-        <Footer dict={dict} />
+        <section className="py-16 px-6 max-w-7xl mx-auto">
+          <BookingIframe />
+        </section>
+        <Footer dict={dict} lang={lang} />
       </main>
     </>
   );

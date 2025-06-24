@@ -1,19 +1,17 @@
 "use client";
 
 import { memo } from "react";
+import Link from "next/link";
 
-const scrollToTop = () => {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth",
-  });
-};
+interface LogoProps {
+  lang?: "en" | "fr";
+}
 
-const LogoComponent = () => (
-  <button
-    onClick={scrollToTop}
+const LogoComponent = ({ lang = "en" }: LogoProps) => (
+  <Link
+    href={`/${lang}`}
     className="cursor-pointer transition-opacity hover:opacity-80"
-    aria-label="Scroll to top"
+    aria-label="Go to home page"
   >
     <svg
       id="logo-7"
@@ -32,7 +30,7 @@ const LogoComponent = () => (
         className="fill-current"
       />
     </svg>
-  </button>
+  </Link>
 );
 
 LogoComponent.displayName = 'Logo';
