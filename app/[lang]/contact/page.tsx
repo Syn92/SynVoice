@@ -20,7 +20,7 @@ export default async function ContactPage({ params }: ContactPageProps) {
       <main className="pt-16 xs:pt-20 sm:pt-24">
         <ContactForm dict={dict} lang={lang} />
         <section className="py-16 px-6 max-w-7xl mx-auto">
-          <BookingIframe />
+          <BookingIframe lang={lang} />
         </section>
         <Footer dict={dict} lang={lang} />
       </main>

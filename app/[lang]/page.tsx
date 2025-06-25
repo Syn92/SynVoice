@@ -29,7 +29,7 @@ export default async function Home({ params }: PageProps) {
         <Testimonials dict={dict} />
         <CTABanner dict={dict} />
         <section className="py-16 px-6 max-w-7xl mx-auto">
-          <BookingIframe />
+          <BookingIframe lang={lang} />
         </section>
         <Footer dict={dict} lang={lang} />
       </main>
