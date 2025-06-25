@@ -90,14 +90,7 @@ const Footer = ({ dict, lang = "en" }: FooterProps) => {
             </div>
           </div>
 
-          {/* Subscribe Newsletter */}
-          <div className="max-w-xs w-full">
-            <h6 className="font-semibold">{dict.footer.newsletter.title}</h6>
-            <form className="mt-6 flex items-center gap-2">
-              <Input type="email" placeholder={dict.footer.newsletter.placeholder} />
-              <Button>{dict.footer.newsletter.button}</Button>
-            </form>
-          </div>
+
         </div>
         <Separator />
         <div className="py-8 flex flex-col-reverse sm:flex-row items-center justify-between gap-x-2 gap-y-5 px-6 xl:px-0">
