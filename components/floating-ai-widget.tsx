@@ -34,6 +34,7 @@ interface FloatingAIWidgetProps {
   onConversationStart?: (conversationId: string) => void;
   onConversationEnd?: () => void;
   onError?: (error: string) => void;
+  onWidgetOpen?: () => void;
   className?: string;
 }
 
@@ -43,6 +44,7 @@ export default function FloatingAIWidget({
   onConversationStart,
   onConversationEnd,
   onError,
+  onWidgetOpen,
   className = "",
 }: FloatingAIWidgetProps) {
   const [isOpen, setIsOpen] = useState(false);
@@ -249,6 +251,8 @@ export default function FloatingAIWidget({
     if (!isOpen) {
       setIsMinimized(false);
       // Don't add welcome message - keep it clean
+      // Track widget opening
+      onWidgetOpen?.();
     }
   };
 
