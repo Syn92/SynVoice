@@ -177,5 +177,17 @@
         "email": "Please enter a valid email address"
       }
     }
+  },
+  "confirmation": {
+    "heading": "Thank You!",
+    "subheading": "Your request has been successfully submitted.",
+    "description": "We appreciate your interest in SynVoice. Our team will get back to you within 24 hours.",
+    "backHome": "Back to Home",
+    "bookDemo": "Book a Demo"
+  },
+  "booking": {
+    "heading": "Book Your Demo",
+    "subheading": "Schedule a personalized demonstration of SynVoice AI voice agents.",
+    "description": "Choose a convenient time for your demo and see how SynVoice can transform your customer experience."
   }
 }

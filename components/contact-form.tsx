@@ -33,7 +33,6 @@ interface ContactFormProps {
 }
 
 export default function ContactForm({ dict, lang }: ContactFormProps) {
-  const [showSuccess, setShowSuccess] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -80,9 +79,8 @@ export default function ContactForm({ dict, lang }: ContactFormProps) {
       });
 
       if (response.ok) {
-        setShowSuccess(true);
-        form.reset();
-        setTimeout(() => setShowSuccess(false), 5000);
+        // Redirect to confirmation page
+        window.location.href = `/${lang}/confirmation`;
       } else {
         throw new Error('Submission failed');
       }
@@ -120,16 +118,7 @@ export default function ContactForm({ dict, lang }: ContactFormProps) {
             </p>
           </div>
 
-          {showSuccess && (
-            <div className="fixed top-5 left-1/2 transform -translate-x-1/2 z-50 flex items-center p-4 bg-[#F5FAF5] border border-[#A9D3AB] rounded-md shadow-lg max-w-[90%] min-w-[100px]">
-              <div className="flex-shrink-0 w-5 h-5 bg-[#12AA67] rounded-full mr-3 flex items-center justify-center">
-                <svg className="w-3 h-3 text-white transform rotate-45 translate-x-[-2px]" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M0 11l2-2 5 5L18 3l2 2L7 18z" />
-                </svg>
-              </div>
-              <span className="text-[#132C14] text-sm">{dict.contact.form.success}</span>
-            </div>
-          )}
+
 
           <div className="bg-card border rounded-lg p-8">
             <form onSubmit={handleSubmit} className="space-y-6">

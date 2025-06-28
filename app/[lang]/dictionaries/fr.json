@@ -163,19 +163,31 @@
     "form": {
       "firstName": "Prénom",
       "lastName": "Nom",
-      "email": "E-mail",
+      "email": "Email",
       "phone": "Téléphone",
-      "company": "Société",
-      "website": "Site Web",
-      "message": "Votre message",
-      "submit": "Soumettre",
-      "reset": "Re-paramétrer",
+      "company": "Entreprise",
+      "website": "Site web",
+      "message": "Votre Message",
+      "submit": "Envoyer",
+      "reset": "Reset",
       "required": "*",
-      "success": "Merci pour votre message. Nous vous répondrons bientôt !",
+      "success": "Merci pour votre message. Nous vous recontacterons bientôt !",
       "validation": {
-        "required": "{field} ne peut pas être vide",
-        "email": "Veuillez entrer une adresse e-mail valide"
+        "required": "{field} est requis",
+        "email": "Veuillez entrer une adresse email valide"
       }
     }
+  },
+  "confirmation": {
+    "heading": "Merci !",
+    "subheading": "Votre demande a été soumise avec succès.",
+    "description": "Nous apprécions votre intérêt pour SynVoice. Notre équipe vous recontactera dans les 24 heures.",
+    "backHome": "Retour à l'accueil",
+    "bookDemo": "Réserver une démo"
+  },
+  "booking": {
+    "heading": "Réservez votre démo",
+    "subheading": "Planifiez une démonstration personnalisée des agents vocaux IA SynVoice.",
+    "description": "Choisissez un moment qui vous convient pour votre démo et découvrez comment SynVoice peut transformer votre expérience client."
   }
 }
