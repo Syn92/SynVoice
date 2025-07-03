@@ -35,17 +35,19 @@ export default function UseCases({ dict }: UseCasesProps) {
           {heading}
         </h2>
       </ScrollReveal>
-      <div className="w-full max-w-(--breakpoint-lg) mx-auto mt-10 sm:mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="w-full max-w-7xl mx-auto mt-10 sm:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
         {cardData.map(({ key, icon: Icon }, index) => {
           const card = cards[key];
           return (
             <ScrollReveal key={key} delay={index * 0.1}>
-              <div className="flex flex-col bg-background border rounded-xl py-6 px-5">
-                <div className="mb-3 h-10 w-10 flex items-center justify-center bg-muted rounded-full">
+              <div className="flex flex-col h-full bg-background border rounded-xl p-6 lg:p-8 hover:shadow-lg transition-shadow duration-300">
+                <div className="mb-4 h-12 w-12 flex items-center justify-center bg-muted rounded-xl">
                   <Icon className="h-6 w-6" />
                 </div>
-                <span className="text-lg font-semibold">{card.title}</span>
-                <p className="mt-1 text-foreground/80 text-[15px]">
+                <h3 className="text-lg lg:text-xl font-semibold mb-3 leading-tight">
+                  {card.title}
+                </h3>
+                <p className="text-foreground/70 text-sm lg:text-base leading-relaxed flex-grow">
                   {card.description}
                 </p>
               </div>

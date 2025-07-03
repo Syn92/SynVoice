@@ -1,13 +1,13 @@
 {
   "hero": {
     "badge": "Smart Voice Agents for Your Business",
-    "headline": "Answer, Book, Delight—Powered by AI",
-    "description": "SynVoice designs and integrates AI voice agents to handle calls, bookings, and reservations, allowing you to focus on what matters most.",
+    "headline": "Improve your customer experience with SynAI",
+    "description": "SynAI designs and integrates AI voice agents to handle calls, bookings and frequent questions, letting you focus on your core business.",
     "bookDemo": "Request Your Demo",
     "watchDemo": "Watch Our Demo"
   },
   "navbar": {
-    "bookDemo": "Request Your Demo",
+    "bookDemo": "Contact Us",
     "navigation": {
       "features": "Features",
       "useCases": "Use Cases",
@@ -20,48 +20,48 @@
     "cards": {
       "receptionist": {
         "title": "Virtual Receptionist",
-        "description": "Answer incoming calls, provide information and route customers to the right department—ideal for gyms, stadiums and sports venues."
+        "description": "Answers incoming calls, provides information and routes customers to the right department, ideal for gyms and health complexes."
       },
       "reservation": {
         "title": "Restaurant Reservation",
-        "description": "Take bookings, confirm availability and manage wait-lists automatically, 24/7."
+        "description": "Handles reservations, checks availability and confirms 24/7 so your staff never has to worry about it."
       },
       "scheduling": {
-        "title": "Appointment Scheduling",
-        "description": "Let patients or clients book, change or cancel appointments without speaking to a human agent."
+        "title": "Intelligent Information Center & Pre‑Qualification",
+        "description": "Automatically answers common questions (opening hours, prices, services, policies), pre‑qualifies callers and forwards only qualified calls to your team."
       },
       "tracking": {
-        "title": "Order Tracking",
-        "description": "Provide real-time delivery updates and handle \"where is my order?\" calls for e-commerce businesses."
+        "title": "24/7 Enhanced Answering Service",
+        "description": "Never miss a call again: the agent takes messages, answers simple questions and can even schedule an automatic call‑back while you’re away."
       }
     }
   },
   "features": {
-    "heading": "Why Choose SynVoice?",
+    "heading": "Why Choose the SynAI Voice Agent?",
     "cards": {
-      "customizable": {
-        "title": "24/7 Availability",
-        "description": "Your voice agents work around the clock, ensuring customers can reach support whenever they need it."
+      "analytics": {
+        "title": "Advanced Analytics",
+        "description": "Track call metrics, customer sentiment and performance insights with detailed reports."
       },
-      "interactive": {
-        "title": "Natural Conversations",
-        "description": "AI-powered agents that understand context and provide human-like responses to customer inquiries."
+      "collaboration": {
+        "title": "Instant Scalability & Transparent Pricing",
+        "description": "Scale capacity as needed and pay only for actual usage, giving you full cost control with no surprises."
       },
       "ai": {
         "title": "Seamless Integration",
-        "description": "Connect with your existing CRM, booking systems, and databases for real-time information access."
+        "description": "Connects to your CRM, reservation systems and databases for real‑time information."
+      },
+      "customizable": {
+        "title": "Extend Your Opening Hours",
+        "description": "Your voice agents work around the clock so customers can get support whenever they need it."
+      },
+      "interactive": {
+        "title": "Natural Conversations",
+        "description": "AI‑powered agents understand context and provide human‑sounding answers to customer requests."
       },
       "media": {
-        "title": "Multi-Language Support",
-        "description": "Serve customers in 30+ languages with native-level pronunciation and cultural understanding."
-      },
-      "analytics": {
-        "title": "Advanced Analytics",
-        "description": "Track call metrics, customer satisfaction, and performance insights with detailed reporting."
-      },
-      "collaboration": {
-        "title": "Instant Scalability",
-        "description": "Handle unlimited concurrent calls without hiring additional staff or expanding infrastructure."
+        "title": "Multilingual Support",
+        "description": "Serve customers in 30+ languages with native pronunciation and cultural understanding."
       }
     }
   },
@@ -69,52 +69,52 @@
     "heading": "Testimonials",
     "items": [
       {
-        "name": "John Doe",
-        "designation": "Operations Manager",
-        "company": "TechCorp",
-        "testimonial": "SynVoice has transformed our customer service. We now handle 3x more calls with the same team size."
-      },
-      {
-        "name": "Sophia Lee",
+        "name": "Anis B.",
         "designation": "Restaurant Owner",
-        "company": "Bella Vista",
-        "testimonial": "Automated reservations have saved us hours daily. Our booking accuracy increased by 95%."
+        "company": "Tacotac, Montreal, Canada",
+        "testimonial": "Before we started using SynAI’s voice agent, we were easily missing 15–20 calls a day, especially during lunch and dinner service. That meant dozens of potential customers lost each week and growing frustration for our clientele.\n\nSince implementing SynAI, we’ve cut missed calls by 36 % and seen a 19 % increase in phone reservations in under two months. The agent automatically answers common questions and books tables directly in our OpenTable system.\n\nMost impressive: everything was set up and running in less than two weeks, and we didn’t have to change our phone number. Customers hardly noticed—except their wait times dropped and they get better information.\n\nI recommend this solution 100 % to any restaurateur who can’t afford a full-time receptionist. It’s like hiring an ultra-reliable employee for a third of the cost."
       },
       {
-        "name": "Michael Johnson",
-        "designation": "Clinic Director",
-        "company": "HealthFirst",
-        "testimonial": "Patients love the 24/7 appointment scheduling. No more missed calls or after-hours booking requests."
+        "name": "Véronique B.",
+        "designation": "Boutique Hotel Owner",
+        "company": "El Consul Mao, Spain",
+        "testimonial": "We first deployed SynAI’s Voice Agent in a highly targeted way—only during closing hours, from 10 p.m. to 7 a.m.—to serve callers from other time zones, especially our U.S. guests. In less than a month, the agent handled over 31 % of overnight calls and achieved a 93 % customer-satisfaction rating (based on our post-interaction survey).\n\nThe most common inquiries were about room availability, cancellation policies, and parking options—simple yet time-consuming questions.\n\nImpressed by the results, we moved to phase 2: a full 24/7 rollout. Since then, our front-desk team spends 38 % less time on the phone and can focus on in-person check-ins and arrivals.\n\nOur average occupancy rate rose from 72 % to 78 % in just three months, largely thanks to the agent’s ability to capture bookings that used to slip through after hours.\n\nThe SynAI team guided us through every step; I wholeheartedly recommend their service."
+      },
+      {
+        "name": "Michael J.",
+        "designation": "Dental Clinic Director",
+        "company": "DentalCare, Florida",
+        "testimonial": "Before partnering with SynAI, our receptionist was fielding 80–100 calls a day, and patients often reached voicemail—especially around lunchtime or late in the afternoon.\n\nWe brought in SynAI’s voice agent to take over whenever the line is busy or outside office hours. In under two months, missed appointments (no-shows) dropped by 22 %, largely thanks to automated reminders. Our receptionists now handle fewer calls overall, but each one is more meaningful, because routine questions are resolved automatically.\n\nThe real game-changer was SynAI’s hands-on support. They invested time to learn our workflows, terminology, and patient needs. Together we built a tailored knowledge base—covering insurance, treatments, appointment policies—and everything went live quickly.\n\nToday, our staff feels less pressure, and patients get better service no matter when they call. SynAI is more than just technology for us; it’s a genuine partner in our commitment to quality care."
       },
       {
         "name": "Emily Davis",
-        "designation": "E-commerce Manager",
+        "designation": "E‑commerce Manager",
         "company": "ShopFast",
-        "testimonial": "Order tracking calls dropped by 80%. Customers get instant updates without waiting on hold."
+        "testimonial": "Order‑tracking calls dropped by 50 % because customers now get instant updates without waiting."
       },
       {
         "name": "Daniel Martinez",
         "designation": "Gym Owner",
         "company": "FitZone",
-        "testimonial": "Our virtual receptionist handles membership inquiries perfectly. Members get instant answers 24/7."
+        "testimonial": "Our virtual receptionist handles membership queries 24/7. Members get instant answers and we’ve boosted sign‑ups and retention."
       },
       {
-        "name": "Jane Smith",
-        "designation": "Customer Success Lead",
+        "name": "Jane Albert",
+        "designation": "Customer Success Manager",
         "company": "InnovateX",
-        "testimonial": "Implementation was seamless. We were live in 3 days with full CRM integration working perfectly."
+        "testimonial": "Implementation was seamless. We were live in three days with full CRM integration working flawlessly."
       }
     ]
   },
   "ctaBanner": {
-    "heading": "Ready to Transform Your Customer Experience?",
-    "description": "SynVoice designs and integrates AI voice agents to handle calls, bookings, and reservations, allowing you to focus on what matters most.",
-    "primaryButton": "Start Free Trial",
+    "heading": "What if AI answered better than you?",
+    "description": "SynAI automates call handling, information requests and bookings, freeing your team from interruptions and optimizing operations effortlessly.",
+    "primaryButton": "Free Trial",
     "secondaryButton": "Book a Demo"
   },
   "footer": {
     "newsletter": {
-      "title": "Stay up to date",
+      "title": "Stay Informed",
       "placeholder": "Enter your email",
       "button": "Subscribe"
     },
@@ -125,40 +125,42 @@
       "testimonials": "Testimonials",
       "privacy": "Privacy"
     },
-    "copyright": "All rights reserved."
+    "copyright": "All rights reserved.",
+    "madeWith": "Made with ❤️ in Montreal",
+    "email": "theo@synai.pro"
   },
   "faq": {
     "heading": "Frequently Asked Questions",
-    "subheading": "Answers to the most common questions about SynVoice.",
+    "subheading": "Answers to the most common questions about our intelligent voice agent.",
     "items": [
       {
         "question": "How long does it take to deploy a voice agent?",
-        "answer": "Most customers go live in under a week using our pre-built templates and guided onboarding."
+        "answer": "Most clients are operational within one to two weeks thanks to our pre‑configured templates and guided onboarding."
       },
       {
-        "question": "Can SynVoice integrate with our existing CRM?",
-        "answer": "Absolutely. We offer native connectors for Salesforce, HubSpot, and Zendesk, plus a REST API for custom integrations."
+        "question": "Can the voice agent integrate with our CRM or reservation system?",
+        "answer": "Absolutely. Our voice agent is API‑first and integrates with popular tools such as OpenTable, Libro and others. We handle the integration with you so everything runs smoothly with zero friction."
       },
       {
-        "question": "How is usage billed?",
-        "answer": "Plans include a pool of call minutes. If you exceed your quota, additional minutes are billed at a transparent per-minute rate."
+        "question": "How much does the voice agent cost?",
+        "answer": "Notre tarification est simple et transparente :\n\nFrais d’implantation : un montant fixe pour la mise en place, qui peut aussi être inclus dans un forfait mensuel si vous préférez étaler le coût.\n\nAbonnement mensuel : il comprend le support, les mises à jour, et 2000 minutes d’utilisation incluses.\n\nAu-delà de 2000 minutes : 0,20 $ par minute supplémentaire.\n\nAdd-ons optionnels (ex. : intégration CRM, statistiques avancées, synchronisation sur mesure…) : des frais mensuels s’appliquent selon les modules choisis.\n\nNotre objectif est de vous offrir un service flexible, adapté à vos besoins réels, sans surprises."
       },
       {
         "question": "Is our data secure?",
-        "answer": "Yes. We're GDPR compliant, use end-to-end encryption, and offer on-prem deployments for Enterprise clients."
+        "answer": "Data security and privacy are central to our approach:\n\nEurope: full compliance with the GDPR (General Data Protection Regulation)\n\nCanada: adherence to Law 25 and PIPEDA requirements\n\nUnited States: infrastructure compatible with HIPAA and CCPA standards as needed\n\nAll communications are end-to-end encrypted, and we also offer on-premises or dedicated-cloud deployment options for organizations with strict requirements (e.g., public sector, healthcare, finance)."
       },
       {
-        "question": "What languages do you support?",
-        "answer": "SynVoice currently supports 30+ languages, and we're adding more every quarter."
+        "question": "Which languages do you support?",
+        "answer": "Our voice agent currently supports more than 30 languages, and we add new ones every quarter."
       },
       {
-        "question": "Can I try SynVoice before committing?",
-        "answer": "Book a demo with our team—we'll set up a proof of concept tailored to your needs, free of charge."
+        "question": "Can I try the voice agent before committing?",
+        "answer": "Book a demo with our team—we can set up a tailored proof of concept free of charge."
       }
     ]
   },
   "contact": {
-    "heading": "Get in Touch",
+    "heading": "Contact Us",
     "subheading": "Ready to transform your customer experience? Contact us today.",
     "form": {
       "firstName": "First Name",
@@ -168,10 +170,10 @@
       "company": "Company",
       "website": "Website",
       "message": "Your Message",
-      "submit": "Submit",
+      "submit": "Send",
       "reset": "Reset",
       "required": "*",
-      "success": "Thank you for your message. We'll get back to you soon!",
+      "success": "Thank you for your message. We will get back to you shortly!",
       "validation": {
         "required": "{field} is required",
         "email": "Please enter a valid email address"
@@ -180,14 +182,13 @@
   },
   "confirmation": {
     "heading": "Thank You!",
-    "subheading": "Your request has been successfully submitted.",
-    "description": "We appreciate your interest in SynVoice. Our team will get back to you within 24 hours.",
-    "backHome": "Back to Home",
-    "bookDemo": "Book a Demo"
+    "subheading": "Your request has been submitted successfully.",
+    "description": "We appreciate your interest in our voice agent. Our team will contact you within 24 hours.",
+    "backHome": "Back to Home"
   },
   "booking": {
     "heading": "Book Your Demo",
-    "subheading": "Schedule a personalized demonstration of SynVoice AI voice agents.",
-    "description": "Choose a convenient time for your demo and see how SynVoice can transform your customer experience."
+    "subheading": "Schedule a personalized demo of SynAI AI voice agents.",
+    "description": "Choose a time that suits you and discover how SynAI can transform your customer experience."
   }
 }

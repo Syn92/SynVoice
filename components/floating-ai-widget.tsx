@@ -202,6 +202,28 @@ export default function FloatingAIWidget({
     setIsMuted(!isMuted);
   }, [conversation, isMuted, volume]);
 
+  const startTextConversation = useCallback(async () => {
+    if (!agentId && !signedUrl) {
+      addSystemMessage("Voice chat not configured. Please contact support.");
+      return null;
+    }
+
+    try {
+      setIsConnecting(true);
+      const options = signedUrl ? { signedUrl } : { agentId: agentId! };
+      const newConversationId = await conversation.startSession(options);
+      setConversationId(newConversationId);
+      // Don't set voice mode for text conversations
+      setIsConnecting(false);
+      onConversationStart?.(newConversationId);
+      return newConversationId;
+    } catch {
+      setIsConnecting(false);
+      addSystemMessage("Failed to start conversation. Please try again.");
+      return null;
+    }
+  }, [agentId, signedUrl, conversation, onConversationStart, addSystemMessage]);
+
   const sendTextMessage = useCallback(async () => {
     if (!textInput.trim()) return;
     
@@ -221,23 +243,25 @@ export default function FloatingAIWidget({
         addSystemMessage("Failed to send message. Please try again.");
       }
     } else {
-      // Start a conversation if not already active
+      // Start a text conversation if not already active
       try {
-        await startVoiceConversation();
-        // Send the message after connection
-        setTimeout(async () => {
-          const conversationWithMessage = conversation as unknown as { sendUserMessage?: (text: string) => Promise<void> };
-          if (conversationWithMessage.sendUserMessage) {
-            await conversationWithMessage.sendUserMessage(textInput);
-          }
-        }, 1000);
+        const newConversationId = await startTextConversation();
+        if (newConversationId) {
+          // Send the message after connection
+          setTimeout(async () => {
+            const conversationWithMessage = conversation as unknown as { sendUserMessage?: (text: string) => Promise<void> };
+            if (conversationWithMessage.sendUserMessage) {
+              await conversationWithMessage.sendUserMessage(textInput);
+            }
+          }, 1000);
+        }
       } catch {
-        addSystemMessage("Please start a conversation first or check your configuration.");
+        addSystemMessage("Please check your configuration and try again.");
       }
     }
 
     setTextInput("");
-  }, [textInput, conversationId, conversation, addMessage, addSystemMessage, startVoiceConversation]);
+  }, [textInput, conversationId, conversation, addMessage, addSystemMessage, startTextConversation]);
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter' && !e.shiftKey) {
@@ -269,7 +293,7 @@ export default function FloatingAIWidget({
 
   return (
     <TooltipProvider>
-      <div className={`fixed bottom-6 right-6 z-50 ${className}`}>
+      <div className={`fixed bottom-6 right-6 z-50 hidden md:block ${className}`}>
         {!isOpen ? (
           // Floating Bubble - Compact proportional style
           <div className="bg-white dark:bg-gray-900 rounded-3xl shadow-2xl border border-gray-200 dark:border-gray-700 p-3 w-64">

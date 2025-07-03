@@ -1,6 +1,5 @@
 import { getDictionary } from "../dictionaries";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { CheckCircle } from "lucide-react";
 import Link from "next/link";
 import { Navbar } from "@/components/navbar";
@@ -18,40 +17,43 @@ export default async function ConfirmationPage({
     <>
       <Navbar dict={dict} lang={lang} isHomePage={false} />
       <main className="pt-16 xs:pt-20 sm:pt-24">
-        <div className="min-h-screen bg-gradient-to-br from-slate-50 to-gray-100 dark:from-gray-950 dark:to-slate-900 flex items-center justify-center p-4">
-          <Card className="w-full max-w-md text-center">
-            <CardHeader className="pb-4">
-              <div className="mx-auto mb-4">
-                <CheckCircle className="w-16 h-16 text-green-500 mx-auto" />
+        <div className="min-h-[calc(100vh-200px)] bg-white dark:bg-gray-950">
+          <div className="max-w-4xl mx-auto px-4 py-16">
+            <div className="text-center">
+              {/* Success Icon */}
+              <div className="mb-8">
+                <CheckCircle className="w-20 h-20 text-green-500 mx-auto" />
               </div>
-              <h1 className="text-2xl font-bold text-gray-900 dark:text-white">
+              
+              {/* Heading */}
+              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
                 {dict.confirmation.heading}
               </h1>
-              <p className="text-gray-600 dark:text-gray-400 mt-2">
+              
+              {/* Subheading */}
+              <p className="text-xl text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
                 {dict.confirmation.subheading}
               </p>
-            </CardHeader>
-            
-            <CardContent className="space-y-6">
-              <p className="text-gray-700 dark:text-gray-300">
+              
+              {/* Description */}
+              <p className="text-lg text-gray-700 dark:text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
                 {dict.confirmation.description}
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-3">
-                <Button asChild className="flex-1">
+              {/* Action Button */}
+              <div className="flex justify-center">
+                <Button 
+                  asChild 
+                  size="lg" 
+                  className="px-8 py-3 text-lg rounded-full"
+                >
                   <Link href={`/${lang}`}>
                     {dict.confirmation.backHome}
                   </Link>
                 </Button>
-                
-                <Button asChild variant="outline" className="flex-1">
-                  <Link href={`/${lang}/booking`}>
-                    {dict.confirmation.bookDemo}
-                  </Link>
-                </Button>
               </div>
-            </CardContent>
-          </Card>
+            </div>
+          </div>
         </div>
         <Footer dict={dict} lang={lang} />
       </main>

@@ -22,7 +22,7 @@ export default async function Home({ params }: PageProps) {
     <>
       <Navbar dict={dict} lang={lang} isHomePage={true} />
       <main className="pt-16 xs:pt-20 sm:pt-24">
-        <Hero dict={dict} />
+        <Hero dict={dict} lang={lang} />
         <Features dict={dict} />
         <UseCases dict={dict} />
         <FAQ dict={dict} />

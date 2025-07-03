@@ -4,6 +4,7 @@ import { ArrowUpRight, CirclePlay } from "lucide-react";
 import React from "react";
 import ScrollReveal from "./scroll-reveal";
 import Image from "next/image";
+import Link from "next/link";
 
 interface HeroProps {
   dict: {
@@ -15,9 +16,10 @@ interface HeroProps {
       watchDemo: string;
     };
   };
+  lang: "en" | "fr";
 }
 
-const Hero = ({ dict }: HeroProps) => {
+const Hero = ({ dict, lang }: HeroProps) => {
   const { badge, headline, description, bookDemo, watchDemo } =
     dict.hero ?? {};
 
@@ -43,17 +45,23 @@ const Hero = ({ dict }: HeroProps) => {
           <ScrollReveal delay={0.4}>
             <div className="mt-12 flex flex-col sm:flex-row items-center sm:justify-center gap-4">
               <Button
+                asChild
                 size="lg"
                 className="w-full sm:w-auto rounded-full text-base"
               >
-                {bookDemo} <ArrowUpRight className="h-5! w-5!" />
+                <Link href={`/${lang}/contact`}>
+                  {bookDemo} <ArrowUpRight className="h-5! w-5!" />
+                </Link>
               </Button>
               <Button
+                asChild
                 variant="outline"
                 size="lg"
                 className="w-full sm:w-auto rounded-full text-base shadow-none"
               >
-                <CirclePlay className="h-5! w-5!" /> {watchDemo}
+                <Link href={`/${lang}/booking`}>
+                  <CirclePlay className="h-5! w-5!" /> {watchDemo}
+                </Link>
               </Button>
             </div>
           </ScrollReveal>

@@ -1,13 +1,13 @@
 {
   "hero": {
     "badge": "Agents vocaux intelligents pour votre entreprise",
-    "headline": "Répondez, réservez, fidélisez—avec l'IA",
-    "description": "SynVoice conçoit et intègre des agents vocaux IA pour gérer les appels, les réservations et les rendez-vous, vous laissant vous concentrer sur votre cœur de métier.",
+    "headline": "Améliorez l'experience de vos clients avec SynAI",
+    "description": "SynAI conçoit et intègre des agents vocaux IA pour gérer les appels, les réservations et les questions fréquentes, vous laissant vous concentrer sur votre cœur de métier.",
     "bookDemo": "Demandez votre démo",
     "watchDemo": "Regardez notre démo"
   },
   "navbar": {
-    "bookDemo": "Demandez votre démo",
+    "bookDemo": "Contactez-nous",
     "navigation": {
       "features": "Fonctionnalités",
       "useCases": "Cas d'usage",
@@ -20,48 +20,48 @@
     "cards": {
       "receptionist": {
         "title": "Réceptionniste virtuel",
-        "description": "Accueille les appels entrants, fournit des informations et oriente les clients vers le bon service—idéal pour les salles de sport et les stades."
+        "description": "Accueille les appels entrants, fournit des informations et gère les réservations. S'adapte à vos besoins. Idéal pour les salles de sport et les complexes de santé."
       },
       "reservation": {
         "title": "Réservation de restaurant",
-        "description": "Prend les réservations, confirme la disponibilité et gère la liste d'attente automatiquement, 24h/24."
+        "description": "Prend en charge les réservations, vérifie les disponibilités et répond automatiquement aux questions fréquentes (allergènes, stationnement, horaires), 24h/24 sans que votre personnel n'ai à s'occuper de quoi que ce soit."
       },
       "scheduling": {
-        "title": "Planification de rendez-vous",
-        "description": "Permet aux patients ou clients de prendre, modifier ou annuler des rendez-vous sans intervention humaine."
+        "title": "Centre d'information intelligent et pré-qualification",
+        "description": "Répondez automatiquement aux questions fréquentes (horaires, tarifs, services, politiques) et pré-qualifiez les appels en amont. L’agent vocal identifie les demandes simples à traiter seul, et redirige uniquement les appels qualifiés vers votre équipe."
       },
       "tracking": {
-        "title": "Suivi de commande",
-        "description": "Fournit des mises à jour de livraison en temps réel et gère les appels \"où est ma commande ?\" pour le e-commerce."
+        "title": "Répondeur amélioré 24/7",
+        "description": "Ne manquez plus jamais un appel. En dehors des heures d’ouverture ou en cas d’indisponibilité, l’agent vocal prend le relais : il fournit l’information essentielle, enregistre les messages importants et peut même programmer un rappel automatique à votre retour."
       }
     }
   },
   "features": {
-    "heading": "Pourquoi choisir SynVoice ?",
+    "heading": "Pourquoi choisir l'agent vocal de SynAI ?",
     "cards": {
+      "analytics": {
+        "title": "Analyses avancées",
+        "description": "Suivez les métriques d'appels, la satisfaction client et les insights de performance avec des rapports détaillés."
+      },
+      "collaboration": {
+        "title": "Évolutivité instantanée et prix transparant",
+        "description": "Ajustez votre capacité en temps réel selon vos besoins. Notre tarification transparente, basée sur l’usage réel, vous permet de maîtriser vos coûts sans surprise."
+      },
+      "ai": {
+        "title": "Intégration fluide",
+        "description": "Se connect à votre CRM, systèmes de réservation et bases de données existants pour un accès en temps réel."
+      },
       "customizable": {
-        "title": "Disponibilité 24h/24",
+        "title": "Étendez vos heures de disponibilités",
         "description": "Vos agents vocaux travaillent en continu, garantissant que les clients peuvent accéder au support quand ils en ont besoin."
       },
       "interactive": {
         "title": "Conversations naturelles",
         "description": "Agents alimentés par IA qui comprennent le contexte et fournissent des réponses naturelles aux demandes clients."
       },
-      "ai": {
-        "title": "Intégration transparente",
-        "description": "Connectez-vous à votre CRM, systèmes de réservation et bases de données existants pour un accès en temps réel."
-      },
       "media": {
         "title": "Support multilingue",
         "description": "Servez les clients dans plus de 30 langues avec une prononciation native et une compréhension culturelle."
-      },
-      "analytics": {
-        "title": "Analyses avancées",
-        "description": "Suivez les métriques d'appels, la satisfaction client et les insights de performance avec des rapports détaillés."
-      },
-      "collaboration": {
-        "title": "Évolutivité instantanée",
-        "description": "Gérez des appels simultanés illimités sans embaucher de personnel supplémentaire."
       }
     }
   },
@@ -69,22 +69,22 @@
     "heading": "Témoignages",
     "items": [
       {
-        "name": "John Doe",
-        "designation": "Responsable des opérations",
-        "company": "TechCorp",
-        "testimonial": "SynVoice a transformé notre service client. Nous gérons maintenant 3 fois plus d'appels avec la même équipe."
-      },
-      {
-        "name": "Sophia Lee",
+        "name": "Anis B.",
         "designation": "Propriétaire de restaurant",
-        "company": "Bella Vista",
-        "testimonial": "Les réservations automatisées nous font économiser des heures quotidiennement. Notre précision de réservation a augmenté de 95%."
+        "company": "Tacotac, Montreal, Canada",
+        "testimonial": "Avant d’utiliser l'agent vocal de SynAI, on manquait facilement 15 à 20 appels par jour, surtout pendant les services du midi et du soir. Ça représente potentiellement des dizaines de clients perdus chaque semaine en plus de créer de la frustration chez notre cliente.\n\nDepuis qu’on a implanté la solution de SynAI, on a réduit nos appels manqués de 36 %, et on a vu une hausse de 19 % des réservations via téléphone en moins de deux mois. L’agent répond automatiquement aux questions fréquentes et effectue des réservations à même notre outil de réservation OpenTable.\n\nLe plus impressionnant, c’est que tout a été installé et opérationnel en moins de 2 semaines, sans qu’on ait eu à changer de numéro. Nos clients n’ont même pas remarqué le changement, sauf qu’ils attendent moins, et qu’ils sont mieux informés.\n\nJe recommande cette solution à 100 % à tous les restaurateurs qui n’ont pas les moyens d’avoir un(e) réceptionniste à temps plein. C’est comme embaucher un employé ultra-fiable, pour 3 fois moins cher."
       },
       {
-        "name": "Michael Johnson",
-        "designation": "Directeur de clinique",
-        "company": "HealthFirst",
-        "testimonial": "Les patients adorent la planification de rendez-vous 24h/24. Plus d'appels manqués ou de demandes de réservation après les heures."
+        "name": "Véronique B.",
+        "designation": "Propriétaire d'un hôtel boutique",
+        "company": "El Consul Mao, Espagne",
+        "testimonial": "Nous avons d’abord intégré l'agent Vocal de SynAI dans une approche très ciblée : uniquement durant les heures de fermeture, entre 22 h et 7 h, afin de répondre aux demandes provenant d'autres fuseaux horaires, notamment pour notre clientèle américaine. À notre grande surprise, en moins d’un mois, plus de 31 % des appels nocturnes ont été traités par l’agent, avec un taux de satisfaction client de 93 % (mesuré via notre enquête post-interaction).\n\nLes appels les plus fréquents concernaient la disponibilité des chambres, les politiques d’annulation ou encore les options de stationnement – des demandes simples, mais chronophages.\n\nFace aux résultats, nous avons rapidement lancé une phase 2 : déploiement 24/7 de l'agent. Depuis, notre équipe de la réception passe 38 % moins de temps au téléphone et peut se concentrer sur l’accueil physique et la gestion des arrivées.\n\nNotre taux d’occupation moyen est passé de 72 % à 78 % en trois mois, et on attribue une bonne partie de cette hausse à la capacité de l’agent à capter des réservations qui, auparavant, auraient été perdues en dehors des heures de service.\n\nDe plus, l'équipe de SynAi nous a accompagné tout le long du processus, je recommande fortement leur service."
+      },
+      {
+        "name": "Michael J.",
+        "designation": "Directeur de clinique dentaire",
+        "company": "DentalCare, Floride",
+        "testimonial": "Avant de faire affaire avec SynAI, notre réceptionniste recevait entre 80 et 100 appels par jour, et il n’était pas rare que des patients tombent sur la boîte vocale, surtout pendant les heures de lunch ou en fin de journée.\n\nNous avons intégré l'agent vocal de SynAI pour prendre le relais dès que la ligne est occupée ou en dehors des heures d’ouverture. En moins de deux mois, nos rendez-vous manqués (no-shows) ont diminué de 22 %, notamment grâce aux rappels automatisés,. Nos réceptionnistes traitent désormais des appels mieux ciblés, plus qualitatifs, puisque les questions simples sont gérées automatiquement par l’agent.\n\nCe qui a vraiment fait la différence, c’est la qualité de l’accompagnement de l’équipe SynAI. Ils ont pris le temps de comprendre notre fonctionnement, notre jargon, nos patients. Ensemble, on a construit une base de connaissances sur mesure (assurances, soins offerts, politiques de rendez-vous) et tout a été mis en place rapidemment.\n\nAujourd’hui, notre équipe est moins sous pression, et nos patients sont mieux servis, peu importe l’heure de leur appel. Pour nous, SynAI, c’est bien plus qu’un outil technologique : c’est un vrai partenaire dans notre engagement envers la qualité des soins."
       },
       {
         "name": "Emily Davis",
@@ -99,7 +99,7 @@
         "testimonial": "Notre réceptionniste virtuel gère parfaitement les demandes d'adhésion. Les membres obtiennent des réponses instantanées 24h/24."
       },
       {
-        "name": "Jane Smith",
+        "name": "Jane Albert",
         "designation": "Responsable succès client",
         "company": "InnovateX",
         "testimonial": "L'implémentation était transparente. Nous étions opérationnels en 3 jours avec l'intégration CRM complète fonctionnant parfaitement."
@@ -107,8 +107,8 @@
     ]
   },
   "ctaBanner": {
-    "heading": "Prêt à transformer votre expérience client ?",
-    "description": "SynVoice conçoit et intègre des agents vocaux IA pour gérer les appels, les réservations et les rendez-vous, vous laissant vous concentrer sur votre cœur de métier.",
+    "heading": "Et si l’intelligence artificielle répondait mieux que vous ?",
+    "description": "SynAI automatise la gestion des appels, des demandes fréquentes et des rendez-vous grâce à un agent vocal propulsé par l’intelligence artificielle, vous permettant de réduire les interruptions et d’optimiser vos opérations sans effort.",
     "primaryButton": "Essai gratuit",
     "secondaryButton": "Réserver une démo"
   },
@@ -125,34 +125,36 @@
       "testimonials": "Témoignages",
       "privacy": "Confidentialité"
     },
-    "copyright": "Tous droits réservés."
+    "copyright": "Tous droits réservés.",
+    "madeWith": "Fait avec ❤️ au Québec",
+    "email": "theo@synai.pro"
   },
   "faq": {
     "heading": "Foire aux questions",
-    "subheading": "Les réponses aux questions les plus fréquentes sur SynVoice.",
+    "subheading": "Les réponses aux questions les plus fréquentes sur notre agent vocal intelligent.",
     "items": [
       {
         "question": "Combien de temps faut-il pour déployer un agent vocal ?",
-        "answer": "La plupart de nos clients sont opérationnels en moins d'une semaine grâce à nos modèles pré-configurés et un accompagnement guidé."
+        "answer": "La plupart de nos clients sont opérationnels en entre 2 et 3 semaines grâce à nos modèles pré-configurés et un accompagnement guidé."
       },
       {
-        "question": "SynVoice peut-il s'intégrer à notre CRM ?",
-        "answer": "Absolument. Nous proposons des connecteurs natifs pour Salesforce, HubSpot et Zendesk, ainsi qu'une API REST pour les intégrations personnalisées."
+        "question": "L'agent vocal peut-il s'intégrer à notre CRM ou système de réservation ?",
+        "answer": "Oui, tout à fait. Notre agent vocal est conçu pour s’adapter aux outils que vous utilisez déjà. Grâce à une API REST flexible, il peut se connecter à la plupart des CRM ou systèmes de réservation, comme OpenTable, Libro, ou d’autres solutions courantes.\nOn s’occupe de l’intégration avec vous, pour que tout fonctionne rapidement et sans friction dans vos opérations quotidiennes."
       },
       {
-        "question": "Comment la consommation est-elle facturée ?",
-        "answer": "Les forfaits incluent un nombre de minutes d'appel. Au-delà du quota, les minutes supplémentaires sont facturées à un tarif transparent par minute."
+        "question": "Combien coûte l'agent vocal ?",
+        "answer": "Notre tarification est simple et transparente :\n\nFrais d’implantation : un montant fixe pour la mise en place, qui peut aussi être inclus dans un forfait mensuel si vous préférez étaler le coût.\n\nAbonnement mensuel : il comprend le support, les mises à jour, et 2000 minutes d’utilisation incluses.\n\nAu-delà de 2000 minutes : 0,20 $ par minute supplémentaire.\n\nAdd-ons optionnels (ex. : intégration CRM, statistiques avancées, synchronisation sur mesure…) : des frais mensuels s’appliquent selon les modules choisis.\n\nNotre objectif est de vous offrir un service flexible, adapté à vos besoins réels, sans surprises."
       },
       {
         "question": "Nos données sont-elles en sécurité ?",
-        "answer": "Oui. Nous sommes conformes au RGPD, utilisons le chiffrement de bout en bout et proposons un déploiement sur site pour les clients Enterprise."
+        "answer": "La sécurité et la confidentialité des données sont au cœur de notre approche :\n\nEurope : conformité totale au RGPD (Règlement général sur la protection des données)\n\nCanada : respect des normes de la Loi 25 et des exigences de la LPRPDE\n\nÉtats-Unis : infrastructure compatible avec les standards HIPAA et CCPA, selon les besoins\n\nToutes les communications sont chiffrées de bout en bout, et nous offrons également des options de déploiement sur site ou en environnement cloud dédié pour les organisations ayant des exigences strictes (ex. : secteur public, santé, finance)."
       },
       {
         "question": "Quelles langues prenez-vous en charge ?",
-        "answer": "SynVoice prend actuellement en charge plus de 30 langues et nous en ajoutons chaque trimestre."
+        "answer": "Notre agent vocal prend actuellement en charge plus de 30 langues et nous en ajoutons chaque trimestre."
       },
       {
-        "question": "Puis-je essayer SynVoice avant de m'engager ?",
+        "question": "Puis-je essayer l'agent vocal avant de m'engager ?",
         "answer": "Réservez une démo avec notre équipe : nous mettrons gratuitement en place une preuve de concept adaptée à vos besoins."
       }
     ]
@@ -181,13 +183,12 @@
   "confirmation": {
     "heading": "Merci !",
     "subheading": "Votre demande a été soumise avec succès.",
-    "description": "Nous apprécions votre intérêt pour SynVoice. Notre équipe vous recontactera dans les 24 heures.",
-    "backHome": "Retour à l'accueil",
-    "bookDemo": "Réserver une démo"
+    "description": "Nous apprécions votre intérêt pour notre agent vocal. Notre équipe vous recontactera dans les 24 heures.",
+    "backHome": "Retour à l'accueil"
   },
   "booking": {
     "heading": "Réservez votre démo",
-    "subheading": "Planifiez une démonstration personnalisée des agents vocaux IA SynVoice.",
-    "description": "Choisissez un moment qui vous convient pour votre démo et découvrez comment SynVoice peut transformer votre expérience client."
+    "subheading": "Planifiez une démonstration personnalisée des agents vocaux IA SynAI.",
+    "description": "Choisissez un moment qui vous convient pour votre démo et découvrez comment SynAI peut transformer votre expérience client."
   }
 }

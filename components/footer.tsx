@@ -18,6 +18,8 @@ interface FooterProps {
         privacy: string;
       };
       copyright: string;
+      madeWith: string;
+      email: string;
     };
   };
   lang?: "en" | "fr";
@@ -86,6 +88,16 @@ const Footer = ({ dict, lang = "en" }: FooterProps) => {
             <div className="mt-4">
               <ThemeToggle />
             </div>
+            
+            {/* Email Contact */}
+            <div className="mt-3">
+              <a 
+                href={`mailto:${dict.footer.email}`}
+                className="text-muted-foreground hover:text-foreground transition-colors text-sm"
+              >
+                {dict.footer.email}
+              </a>
+            </div>
           </div>
 
 
@@ -93,16 +105,20 @@ const Footer = ({ dict, lang = "en" }: FooterProps) => {
         <Separator />
         <div className="py-8 flex flex-col-reverse sm:flex-row items-center justify-between gap-x-2 gap-y-5 px-6 xl:px-0">
           {/* Copyright */}
-          <span className="text-muted-foreground text-center sm:text-start">
-            &copy; {new Date().getFullYear()}{" "}
-            <Link href={`/${lang}`}>
-              SynVoice
-            </Link>
-            . {dict.footer.copyright}
-          </span>
+          <div className="flex flex-col sm:flex-row items-center gap-2 text-muted-foreground text-center sm:text-start">
+            <span>
+              &copy; {new Date().getFullYear()}{" "}
+              <Link href={`/${lang}`}>
+                SynAI
+              </Link>
+              . {dict.footer.copyright}
+            </span>
+            <span className="hidden sm:inline">•</span>
+            <span>{dict.footer.madeWith}</span>
+          </div>
 
           <div className="flex items-center gap-5 text-muted-foreground">
-            {/* Reserved for future social links or other actions */}
+            {/* Email moved to left side */}
           </div>
         </div>
       </div>
