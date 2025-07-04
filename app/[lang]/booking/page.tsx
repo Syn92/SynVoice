@@ -2,6 +2,7 @@ import { getDictionary } from "../dictionaries";
 import BookingIframe from "@/components/booking-iframe";
 import { Navbar } from "@/components/navbar";
 import Footer from "@/components/footer";
+import { Metadata } from "next";
 
 export default async function BookingPage({
   params,
@@ -46,17 +47,34 @@ export default async function BookingPage({
   );
 }
 
-// Metadata pour SEO
 export async function generateMetadata({
   params,
 }: {
   params: Promise<{ lang: "en" | "fr" }>;
-}) {
+}): Promise<Metadata> {
   const { lang } = await params;
   const dict = await getDictionary(lang);
 
   return {
-    title: dict.booking.heading,
+    title: "SynAI - Book Demo",
     description: dict.booking.description,
+    openGraph: {
+      title: "SynAI - Book Demo",
+      description: dict.booking.description,
+      url: `https://synai.pro/${lang}/booking`,
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary',
+      title: "SynAI - Book Demo",
+      description: dict.booking.description,
+    },
+    alternates: {
+      canonical: `https://synai.pro/${lang}/booking`,
+      languages: {
+        'en-US': 'https://synai.pro/en/booking',
+        'fr-FR': 'https://synai.pro/fr/booking',
+      },
+    },
   };
 } 

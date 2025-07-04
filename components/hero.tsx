@@ -1,3 +1,5 @@
+"use client";
+
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight, CirclePlay } from "lucide-react";
@@ -23,6 +25,13 @@ const Hero = ({ dict, lang }: HeroProps) => {
   const { badge, headline, description, bookDemo, watchDemo } =
     dict.hero ?? {};
 
+  const handleBookDemo = () => {
+    const bookingSection = document.getElementById('booking-section');
+    if (bookingSection) {
+      bookingSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="min-h-[calc(100vh-6rem)] flex flex-col items-center py-10 px-6">
       <div className="md:mt-6 flex items-center justify-center">
@@ -45,13 +54,11 @@ const Hero = ({ dict, lang }: HeroProps) => {
           <ScrollReveal delay={0.4}>
             <div className="mt-12 flex flex-col sm:flex-row items-center sm:justify-center gap-4">
               <Button
-                asChild
                 size="lg"
                 className="w-full sm:w-auto rounded-full text-base"
+                onClick={handleBookDemo}
               >
-                <Link href={`/${lang}/contact`}>
-                  {bookDemo} <ArrowUpRight className="h-5! w-5!" />
-                </Link>
+                {bookDemo} <ArrowUpRight className="h-5! w-5!" />
               </Button>
               <Button
                 asChild
@@ -73,7 +80,7 @@ const Hero = ({ dict, lang }: HeroProps) => {
             <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-primary/10 rounded-2xl blur-3xl transform scale-105"></div>
             <Image 
               src="/hero2.png" 
-              alt="Dashboard Preview" 
+              alt="SynAI AI voice agent dashboard showing call analytics, customer interactions, and intelligent voice automation features" 
               width={1200}
               height={675}
               priority

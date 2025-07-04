@@ -73,7 +73,7 @@ export default function FloatingAIIntegration({
 
   // Only render if we have configuration
   if (!agentId && !signedUrl) {
-    console.warn("SynVoice AI Widget: No agent configuration found. Please set NEXT_PUBLIC_ELEVENLABS_AGENT_ID or NEXT_PUBLIC_ELEVENLABS_SIGNED_URL");
+    console.warn("SynAI AI Widget: No agent configuration found. Please set NEXT_PUBLIC_ELEVENLABS_AGENT_ID or NEXT_PUBLIC_ELEVENLABS_SIGNED_URL");
     return null;
   }
 

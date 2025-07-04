@@ -10,6 +10,69 @@ const geistSans = Geist({
   subsets: ["latin"],
 });
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "SynAI",
+  "legalName": "SynAI - AI Voice Agent Solutions",
+  "url": "https://synai.pro",
+  "logo": "https://synai.pro/android-chrome-512x512.png",
+  "description": "Expert consulting services to implement intelligent voice agents for your business. Transform customer interactions with AI-powered voice solutions.",
+  "email": "theo@synai.pro",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "CA",
+    "addressLocality": "Montreal",
+    "addressRegion": "QC"
+  },
+  "sameAs": [
+    "https://linkedin.com/company/synai",
+    "https://twitter.com/synai_pro"
+  ],
+  "service": {
+    "@type": "Service",
+    "name": "AI Voice Agent Implementation",
+    "description": "Professional AI voice agent consulting and implementation services for businesses",
+    "provider": {
+      "@type": "Organization",
+      "name": "SynAI"
+    },
+    "areaServed": {
+      "@type": "Place",
+      "name": "Global"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "AI Voice Agent Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Voice Agent Implementation",
+            "description": "Custom AI voice agent setup and integration"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Voice Agent Consulting",
+            "description": "Expert consulting for voice automation strategies"
+          }
+        }
+      ]
+    }
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+1-XXX-XXX-XXXX",
+    "contactType": "customer service",
+    "email": "theo@synai.pro",
+    "availableLanguage": ["English", "French"]
+  }
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -32,6 +95,14 @@ export default function RootLayout({
             `,
           }}
         />
+        {/* Structured Data */}
+        <Script
+          id="structured-data"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(structuredData),
+          }}
+        />
       </head>
       <body className={`${geistSans.className} antialiased`}>
         {/* Google Tag Manager (noscript) */}
@@ -48,7 +119,7 @@ export default function RootLayout({
           <TooltipProvider>{children}</TooltipProvider>
         </ThemeProvider>
         <Analytics />
-        {/* SynVoice AI Floating Widget - Available on all pages */}
+        {/* SynAI AI Floating Widget - Available on all pages */}
         <FloatingAIIntegration />
       </body>
     </html>
