@@ -28,7 +28,7 @@ export default function LanguageSwitcher({ current }: LanguageSwitcherProps) {
             <Button
               variant={active ? "default" : "ghost"}
               size="sm"
-              className="rounded-none px-3 py-1 text-xs font-semibold"
+              className="rounded-none px-3 py-1 text-xs font-bold font-montserrat"
             >
               {code.toUpperCase()}
             </Button>

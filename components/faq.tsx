@@ -37,14 +37,14 @@ const FAQ = ({ dict }: FAQProps) => {
         {/* Header */}
         <ScrollReveal>
           <div className="text-center mb-12">
-            <Badge variant="outline" className="mb-4 px-4 py-2">
+            <Badge variant="outline" className="mb-4 px-4 py-2 font-bold font-montserrat">
               <MessageCircle className="w-4 h-4 mr-2" />
               Frequently Asked Questions
             </Badge>
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold font-montserrat tracking-tight mb-6 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
               {heading}
             </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg font-semibold font-open-sans text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               {subheading}
             </p>
           </div>
@@ -103,7 +103,7 @@ const FAQItem = ({
               <MessageCircle className="w-5 h-5 text-primary" />
             </div>
             <div className="flex-1 min-w-0">
-              <h3 className="text-lg lg:text-xl font-semibold leading-relaxed">
+              <h3 className="text-lg lg:text-xl font-bold font-montserrat leading-relaxed">
                 {item.question}
               </h3>
             </div>
@@ -123,7 +123,7 @@ const FAQItem = ({
       
       <AccordionContent className="px-6 pb-6">
         <div className="pl-14 pr-4">
-          <div className="text-base lg:text-lg text-muted-foreground leading-relaxed whitespace-pre-line">
+          <div className="text-base lg:text-lg font-semibold font-open-sans text-muted-foreground leading-relaxed whitespace-pre-line">
             {item.answer}
           </div>
         </div>

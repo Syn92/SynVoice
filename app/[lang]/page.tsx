@@ -75,7 +75,7 @@ export default async function Home({ params }: PageProps) {
         <UseCases dict={dict} />
         <FAQ dict={dict} />
         <Testimonials dict={dict} />
-        <CTABanner dict={dict} />
+        <CTABanner dict={dict} lang={lang} />
         <section id="booking-section" className="py-16 px-6 max-w-7xl mx-auto">
           <BookingIframe lang={lang} />
         </section>

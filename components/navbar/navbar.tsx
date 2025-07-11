@@ -25,7 +25,7 @@ const Navbar = ({ lang, dict, isHomePage = false }: NavbarProps) => {
   const { bookDemo } = dict.navbar ?? {};
 
   return (
-    <nav className="fixed z-10 top-6 inset-x-4 h-14 xs:h-16 bg-background/50 backdrop-blur-xs border dark:border-slate-700/70 max-w-(--breakpoint-xl) mx-auto rounded-full">
+    <nav className="fixed z-100 top-6 inset-x-4 h-14 xs:h-16 bg-background/50 backdrop-blur-xs border dark:border-slate-700/70 max-w-(--breakpoint-xl) mx-auto rounded-full">
       <div className="h-full flex items-center justify-between mx-auto px-4">
         <Logo lang={lang} />
 
@@ -37,7 +37,7 @@ const Navbar = ({ lang, dict, isHomePage = false }: NavbarProps) => {
           <div className="hidden lg:flex items-center gap-3">
             <LanguageSwitcher current={lang} />
             <Button asChild>
-              <Link href={`/${lang}/contact`}>{bookDemo}</Link>
+              <Link href={`/${lang}/contact`} className="font-bold font-montserrat">{bookDemo}</Link>
             </Button>
           </div>
 

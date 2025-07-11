@@ -80,7 +80,7 @@ const Features = ({ dict }: FeaturesProps) => {
   return (
     <div id="features" className="w-full py-12 xs:py-20 px-6">
       <ScrollReveal>
-        <h2 className="text-3xl xs:text-4xl sm:text-5xl font-bold tracking-tight text-center">
+        <h2 className="text-3xl xs:text-4xl sm:text-5xl font-extrabold font-montserrat tracking-tight text-center">
           {dict.features.heading}
         </h2>
       </ScrollReveal>
@@ -91,10 +91,10 @@ const Features = ({ dict }: FeaturesProps) => {
               <div className="mb-4 h-12 w-12 flex items-center justify-center bg-muted rounded-xl">
                 <feature.icon className="h-6 w-6" />
               </div>
-              <h3 className="text-lg lg:text-xl font-semibold mb-3 leading-tight">
+              <h3 className="text-lg lg:text-xl font-bold font-montserrat mb-3 leading-tight">
                 {feature.title}
               </h3>
-              <p className="text-foreground/70 text-sm lg:text-base leading-relaxed flex-grow">
+              <p className="text-foreground/70 text-sm lg:text-base font-semibold font-open-sans leading-relaxed flex-grow">
                 {feature.description}
               </p>
             </div>

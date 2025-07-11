@@ -85,24 +85,6 @@
         "designation": "Dental Clinic Director",
         "company": "DentalCare, Florida",
         "testimonial": "Before partnering with SynAI, our receptionist was fielding 80–100 calls a day, and patients often reached voicemail—especially around lunchtime or late in the afternoon.\n\nWe brought in SynAI’s voice agent to take over whenever the line is busy or outside office hours. In under two months, missed appointments (no-shows) dropped by 22 %, largely thanks to automated reminders. Our receptionists now handle fewer calls overall, but each one is more meaningful, because routine questions are resolved automatically.\n\nThe real game-changer was SynAI’s hands-on support. They invested time to learn our workflows, terminology, and patient needs. Together we built a tailored knowledge base—covering insurance, treatments, appointment policies—and everything went live quickly.\n\nToday, our staff feels less pressure, and patients get better service no matter when they call. SynAI is more than just technology for us; it’s a genuine partner in our commitment to quality care."
-      },
-      {
-        "name": "Emily Davis",
-        "designation": "E‑commerce Manager",
-        "company": "ShopFast",
-        "testimonial": "Order‑tracking calls dropped by 50 % because customers now get instant updates without waiting."
-      },
-      {
-        "name": "Daniel Martinez",
-        "designation": "Gym Owner",
-        "company": "FitZone",
-        "testimonial": "Our virtual receptionist handles membership queries 24/7. Members get instant answers and we’ve boosted sign‑ups and retention."
-      },
-      {
-        "name": "Jane Albert",
-        "designation": "Customer Success Manager",
-        "company": "InnovateX",
-        "testimonial": "Implementation was seamless. We were live in three days with full CRM integration working flawlessly."
       }
     ]
   },

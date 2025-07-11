@@ -2,11 +2,10 @@
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ArrowUpRight, CirclePlay } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import React from "react";
 import ScrollReveal from "./scroll-reveal";
 import Image from "next/image";
-import Link from "next/link";
 
 interface HeroProps {
   dict: {
@@ -21,8 +20,8 @@ interface HeroProps {
   lang: "en" | "fr";
 }
 
-const Hero = ({ dict, lang }: HeroProps) => {
-  const { badge, headline, description, bookDemo, watchDemo } =
+const Hero = ({ dict }: HeroProps) => {
+  const { badge, headline, description, bookDemo } =
     dict.hero ?? {};
 
   const handleBookDemo = () => {
@@ -37,38 +36,28 @@ const Hero = ({ dict, lang }: HeroProps) => {
       <div className="md:mt-6 flex items-center justify-center">
         <div className="text-center max-w-2xl">
           <ScrollReveal delay={0.1}>
-            <Badge className="bg-primary rounded-full py-1 border-none">
+            <Badge className="rounded-full py-1.5 border-none font-bold font-montserrat" style={{ backgroundColor: '#272a33', color: '#f7f3ec' }}>
               {badge}
             </Badge>
           </ScrollReveal>
           <ScrollReveal delay={0.2}>
-            <h1 className="mt-6 max-w-[20ch] text-3xl xs:text-4xl sm:text-5xl md:text-6xl font-bold leading-[1.2]! tracking-tight">
+            <h1 className="mt-6 max-w-[20ch] text-3xl xs:text-4xl sm:text-5xl md:text-6xl font-extrabold font-montserrat leading-[1.2]! tracking-tight">
               {headline}
             </h1>
           </ScrollReveal>
           <ScrollReveal delay={0.3}>
-            <p className="mt-6 max-w-[60ch] xs:text-lg">
+            <p className="mt-6 max-w-[60ch] xs:text-lg font-semibold font-open-sans">
               {description}
             </p>
           </ScrollReveal>
           <ScrollReveal delay={0.4}>
-            <div className="mt-12 flex flex-col sm:flex-row items-center sm:justify-center gap-4">
+            <div className="mt-12 flex justify-center">
               <Button
                 size="lg"
-                className="w-full sm:w-auto rounded-full text-base"
+                className="w-full sm:w-auto rounded-full text-base font-semibold font-montserrat"
                 onClick={handleBookDemo}
               >
                 {bookDemo} <ArrowUpRight className="h-5! w-5!" />
-              </Button>
-              <Button
-                asChild
-                variant="outline"
-                size="lg"
-                className="w-full sm:w-auto rounded-full text-base shadow-none"
-              >
-                <Link href={`/${lang}/booking`}>
-                  <CirclePlay className="h-5! w-5!" /> {watchDemo}
-                </Link>
               </Button>
             </div>
           </ScrollReveal>

@@ -102,7 +102,7 @@ const Testimonials = ({ dict }: TestimonialsProps) => {
       id="testimonials"
       className="w-full py-12 xs:py-20 px-6"
     >
-      <h2 className="text-3xl xs:text-4xl sm:text-5xl font-bold tracking-tight text-center mb-10 sm:mb-16">
+      <h2 className="text-3xl xs:text-4xl sm:text-5xl font-extrabold font-montserrat tracking-tight text-center mb-10 sm:mb-16">
         {dict.testimonials.heading}
       </h2>
       <div className="w-full max-w-7xl mx-auto">
@@ -191,7 +191,7 @@ const TestimonialCard = ({
         {!isExpanded && shouldShowReadMore ? (
           <div>
             <p 
-              className="text-lg lg:text-xl leading-relaxed text-foreground/90 mb-4"
+              className="text-lg lg:text-xl font-semibold font-open-sans leading-relaxed text-foreground/90 mb-4"
               dangerouslySetInnerHTML={{ 
                 __html: `"${highlightStats(condensedVersion, stats)}"` 
               }}
@@ -200,7 +200,7 @@ const TestimonialCard = ({
               variant="ghost" 
               size="sm"
               onClick={() => setIsExpanded(true)}
-              className="text-primary hover:text-primary/80 p-0 h-auto font-medium"
+              className="text-primary hover:text-primary/80 p-0 h-auto font-medium font-open-sans"
             >
               Read more <ChevronDown className="w-4 h-4 ml-1" />
             </Button>
@@ -208,7 +208,7 @@ const TestimonialCard = ({
         ) : (
           <div>
             <p 
-              className="text-base lg:text-lg leading-relaxed text-foreground/90 mb-4 whitespace-pre-line"
+              className="text-base lg:text-lg font-semibold font-open-sans leading-relaxed text-foreground/90 mb-4 whitespace-pre-line"
               dangerouslySetInnerHTML={{ 
                 __html: `"${highlightStats(testimonial.testimonial, stats)}"` 
               }}
@@ -218,7 +218,7 @@ const TestimonialCard = ({
                 variant="ghost" 
                 size="sm"
                 onClick={() => setIsExpanded(false)}
-                className="text-primary hover:text-primary/80 p-0 h-auto font-medium"
+                className="text-primary hover:text-primary/80 p-0 h-auto font-medium font-open-sans"
               >
                 Read less <ChevronUp className="w-4 h-4 ml-1" />
               </Button>
@@ -235,8 +235,8 @@ const TestimonialCard = ({
           </AvatarFallback>
         </Avatar>
         <div>
-          <p className="font-semibold text-lg">{testimonial.name}</p>
-          <p className="text-sm text-muted-foreground">{testimonial.designation}</p>
+          <p className="font-bold font-montserrat text-lg">{testimonial.name}</p>
+          <p className="text-sm font-semibold font-open-sans text-muted-foreground">{testimonial.designation}</p>
         </div>
       </div>
     </div>

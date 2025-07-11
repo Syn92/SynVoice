@@ -1,14 +1,73 @@
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { ThemeProvider } from "next-themes";
-import { Geist } from "next/font/google";
+import { Montserrat, Open_Sans } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next"
 import FloatingAIIntegration from "@/components/floating-ai-integration";
+import { Metadata } from "next";
 
-const geistSans = Geist({
+const montserrat = Montserrat({
   subsets: ["latin"],
+  weight: ["400", "600", "700", "800"],
+  variable: "--font-montserrat",
 });
+
+const openSans = Open_Sans({
+  subsets: ["latin"],
+  weight: ["400", "600"],
+  variable: "--font-open-sans",
+});
+
+export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://synai.pro'),
+  title: {
+    default: "SynAI - AI Voice Agent Solutions",
+    template: "%s | SynAI"
+  },
+  description: "Expert consulting services to implement intelligent voice agents for your business. Transform customer interactions with AI-powered voice solutions.",
+  keywords: ["AI voice agents", "voice automation", "customer service", "AI consulting", "voice technology"],
+  authors: [{ name: "SynAI" }],
+  creator: "SynAI",
+  publisher: "SynAI",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "/",
+    title: "SynAI - AI Voice Agent Solutions",
+    description: "Expert consulting services to implement intelligent voice agents for your business. Transform customer interactions with AI-powered voice solutions.",
+    siteName: "SynAI",
+    images: [
+      {
+        url: "/preview.png",
+        width: 1200,
+        height: 630,
+        alt: "SynAI - AI Voice Agent Solutions"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "SynAI - AI Voice Agent Solutions",
+    description: "Expert consulting services to implement intelligent voice agents for your business. Transform customer interactions with AI-powered voice solutions.",
+    images: ["/preview.png"],
+    creator: "@synai_pro"
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  verification: {
+    google: 'your-google-verification-code', // Remplacez par votre code de vérification Google
+  },
+};
 
 const structuredData = {
   "@context": "https://schema.org",
@@ -81,6 +140,14 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning>
       <head>
+        {/* Favicon and App Icons */}
+        <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <meta name="apple-mobile-web-app-title" content="SynAI" />
+        <link rel="manifest" href="/site.webmanifest" />
+        
         {/* Google Tag Manager */}
         <Script
           id="gtm-script"
@@ -104,7 +171,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${geistSans.className} antialiased`}>
+      <body className={`${montserrat.variable} ${openSans.variable} antialiased`}>
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe 

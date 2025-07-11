@@ -21,6 +21,8 @@ export interface AnimatedGridPatternProps
   numSquares?: number;
   maxOpacity?: number;
   duration?: number;
+  strokeColor?: string;
+  fillColor?: string;
 }
 
 export function AnimatedGridPattern({
@@ -33,6 +35,8 @@ export function AnimatedGridPattern({
   className,
   maxOpacity = 0.5,
   duration = 4,
+  strokeColor,
+  fillColor,
   ...props
 }: AnimatedGridPatternProps) {
   const id = useId();
@@ -122,6 +126,7 @@ export function AnimatedGridPattern({
           <path
             d={`M.5 ${height}V.5H${width}`}
             fill="none"
+            stroke={strokeColor || "currentColor"}
             strokeDasharray={strokeDasharray}
           />
         </pattern>
@@ -144,7 +149,7 @@ export function AnimatedGridPattern({
             height={height - 1}
             x={x * width + 1}
             y={y * height + 1}
-            fill="currentColor"
+            fill={fillColor || "currentColor"}
             strokeWidth="0"
           />
         ))}

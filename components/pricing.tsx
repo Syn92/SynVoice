@@ -75,7 +75,7 @@ const Pricing = () => {
       id="pricing"
       className="flex flex-col items-center justify-center py-12 xs:py-20 px-6"
     >
-      <h1 className="text-3xl xs:text-4xl md:text-5xl font-bold text-center tracking-tight">
+      <h1 className="text-3xl xs:text-4xl md:text-5xl font-extrabold font-montserrat text-center tracking-tight">
         Pricing
       </h1>
       <Tabs
@@ -84,10 +84,10 @@ const Pricing = () => {
         className="mt-8"
       >
         <TabsList className="h-11 px-1.5 rounded-full bg-primary/5">
-          <TabsTrigger value="monthly" className="py-1.5 rounded-full">
+          <TabsTrigger value="monthly" className="py-1.5 rounded-full font-semibold font-open-sans">
             Monthly
           </TabsTrigger>
-          <TabsTrigger value="yearly" className="py-1.5 rounded-full">
+          <TabsTrigger value="yearly" className="py-1.5 rounded-full font-semibold font-open-sans">
             Yearly (Save {YEARLY_DISCOUNT}%)
           </TabsTrigger>
         </TabsList>
@@ -101,35 +101,35 @@ const Pricing = () => {
             })}
           >
             {plan.isPopular && (
-              <Badge className="absolute top-0 right-1/2 translate-x-1/2 -translate-y-1/2">
+              <Badge className="absolute top-0 right-1/2 translate-x-1/2 -translate-y-1/2 font-bold font-montserrat">
                 Most Popular
               </Badge>
             )}
-            <h3 className="text-lg font-medium">{plan.name}</h3>
-            <p className="mt-2 text-4xl font-bold">
+            <h3 className="text-lg font-bold font-montserrat">{plan.name}</h3>
+            <p className="mt-2 text-4xl font-extrabold font-montserrat">
               $
               {selectedBillingPeriod === "monthly"
                 ? plan.price
                 : plan.price * ((100 - YEARLY_DISCOUNT) / 100)}
-              <span className="ml-1.5 text-sm text-muted-foreground font-normal">
+              <span className="ml-1.5 text-sm font-semibold font-open-sans text-muted-foreground font-normal">
                 /month
               </span>
             </p>
-            <p className="mt-4 font-medium text-muted-foreground">
+            <p className="mt-4 font-semibold font-open-sans text-muted-foreground">
               {plan.description}
             </p>
 
             <Button
               variant={plan.isPopular ? "default" : "outline"}
               size="lg"
-              className="w-full mt-6 text-base"
+              className="w-full mt-6 text-base font-semibold font-open-sans"
             >
               {plan.buttonText}
             </Button>
             <Separator className="my-8" />
             <ul className="space-y-2">
               {plan.features.map((feature) => (
-                <li key={feature.title} className="flex items-start gap-1.5">
+                <li key={feature.title} className="flex items-start gap-1.5 font-semibold font-open-sans">
                   <CircleCheck className="h-4 w-4 mt-1 text-green-600" />
                   {feature.title}
                   {feature.tooltip && (
@@ -137,7 +137,7 @@ const Pricing = () => {
                       <TooltipTrigger className="cursor-help">
                         <CircleHelp className="h-4 w-4 mt-1 text-gray-500" />
                       </TooltipTrigger>
-                      <TooltipContent>{feature.tooltip}</TooltipContent>
+                      <TooltipContent className="font-semibold font-open-sans">{feature.tooltip}</TooltipContent>
                     </Tooltip>
                   )}
                 </li>

@@ -39,6 +39,10 @@
   --color-chart-4: var(--chart-4);
   --color-chart-5: var(--chart-5);
 
+  --font-sans: var(--font-open-sans);
+  --font-montserrat: var(--font-montserrat);
+  --font-open-sans: var(--font-open-sans);
+
   --radius-lg: var(--radius);
   --radius-md: calc(var(--radius) - 2px);
   --radius-sm: calc(var(--radius) - 4px);
@@ -89,23 +93,23 @@
 
     --background: hsl(0 0% 100%);
 
-    --foreground: hsl(0 0% 3.9%);
+    --foreground: #272a33;
 
     --card: hsl(0 0% 100%);
 
-    --card-foreground: hsl(0 0% 3.9%);
+    --card-foreground: #272a33;
 
     --popover: hsl(0 0% 100%);
 
-    --popover-foreground: hsl(0 0% 3.9%);
+    --popover-foreground: #272a33;
 
-    --primary: hsl(0 0% 9%);
+    --primary: #086b69;
 
     --primary-foreground: hsl(0 0% 98%);
 
     --secondary: hsl(0 0% 96.1%);
 
-    --secondary-foreground: hsl(0 0% 9%);
+    --secondary-foreground: #272a33;
 
     --muted: hsl(0 0% 96.1%);
 
@@ -113,7 +117,7 @@
 
     --accent: hsl(0 0% 96.1%);
 
-    --accent-foreground: hsl(0 0% 9%);
+    --accent-foreground: #272a33;
 
     --destructive: hsl(0 84.2% 60.2%);
 
@@ -123,7 +127,7 @@
 
     --input: hsl(0 0% 89.8%);
 
-    --ring: hsl(0 0% 3.9%);
+    --ring: #086b69;
 
     --chart-1: hsl(12 76% 61%);
 
@@ -139,31 +143,31 @@
   }
 
   .dark {
-    --background: hsl(0 0% 6.9%);
+    --background: #272a33;
 
     --foreground: hsl(0 0% 98%);
 
-    --card: hsl(0 0% 3.9%);
+    --card: #272a33;
 
     --card-foreground: hsl(0 0% 98%);
 
-    --popover: hsl(0 0% 3.9%);
+    --popover: #272a33;
 
     --popover-foreground: hsl(0 0% 98%);
 
-    --primary: hsl(0 0% 98%);
+    --primary: #086b69;
 
-    --primary-foreground: hsl(0 0% 9%);
+    --primary-foreground: hsl(0 0% 98%);
 
-    --secondary: hsl(0 0% 14.9%);
+    --secondary: #272a33;
 
     --secondary-foreground: hsl(0 0% 98%);
 
-    --muted: hsl(0 0% 14.9%);
+    --muted: #272a33;
 
     --muted-foreground: hsl(0 0% 63.9%);
 
-    --accent: hsl(0 0% 14.9%);
+    --accent: #272a33;
 
     --accent-foreground: hsl(0 0% 98%);
 
@@ -171,11 +175,11 @@
 
     --destructive-foreground: hsl(0 0% 98%);
 
-    --border: hsl(0 0% 14.9%);
+    --border: #272a33;
 
-    --input: hsl(0 0% 14.9%);
+    --input: #272a33;
 
-    --ring: hsl(0 0% 83.1%);
+    --ring: #086b69;
 
     --chart-1: hsl(220 70% 50%);
 
@@ -199,7 +203,7 @@
     @apply scroll-smooth scroll-pt-12;
   }
   body {
-    @apply text-foreground;
+    @apply text-foreground font-open-sans font-semibold;
   }
   button {
     @apply cursor-pointer;

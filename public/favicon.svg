@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="48"><svg id="SvgjsSvg1010" data-name="Calque 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #272a33;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        fill: #d1d1d1;
+      }
+    </style>
+  </defs>
+  <g id="SvgjsG1009" data-name="Logo - Noir">
+    <rect class="cls-1" width="48" height="48"></rect>
+    <g>
+      <polygon class="cls-3" points="36.64 26.85 11.41 28.99 11.41 21.12 36.64 18.98 36.64 26.85"></polygon>
+      <polygon class="cls-2" points="11.41 28.99 11.41 21.12 39 4.6 38.97 12.86 11.41 28.99"></polygon>
+      <polygon class="cls-2" points="36.64 18.98 36.64 26.85 9 43.4 9.08 35.11 36.64 18.98"></polygon>
+    </g>
+  </g>
+</svg><style>@media (prefers-color-scheme: light) { :root { filter: none; } }
+@media (prefers-color-scheme: dark) { :root { filter: none; } }
+</style></svg>

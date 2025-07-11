@@ -110,10 +110,10 @@ export default function ContactForm({ dict, lang }: ContactFormProps) {
             />
           )}
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
+            <h2 className="text-3xl font-extrabold font-montserrat tracking-tight sm:text-4xl mb-4">
               {dict.contact.heading}
             </h2>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-lg font-semibold font-open-sans text-muted-foreground">
               {dict.contact.subheading}
             </p>
           </div>

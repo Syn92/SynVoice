@@ -42,17 +42,17 @@ export const NavigationSheet = ({ dict, lang, isHomePage = false }: NavigationSh
           <Separator className="my-6" />
           
           <div className="space-y-4">
-            <Button asChild className="w-full">
+            <Button asChild className="w-full font-bold font-montserrat">
               <Link href={`/${lang}/contact`}>{dict.navbar.bookDemo}</Link>
             </Button>
             
             <div className="flex items-center justify-between">
-              <span className="text-sm font-medium">Language</span>
+              <span className="text-sm font-bold font-montserrat">Language</span>
               <LanguageSwitcher current={lang} />
             </div>
             
             <div className="flex items-center justify-between">
-              <span className="text-sm font-medium">Theme</span>
+              <span className="text-sm font-bold font-montserrat">Theme</span>
               <ThemeToggle />
             </div>
           </div>
