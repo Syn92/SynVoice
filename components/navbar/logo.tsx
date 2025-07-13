@@ -8,9 +8,10 @@ import { useTheme } from "next-themes";
 interface LogoProps {
   lang?: "en" | "fr";
   forceTheme?: "light" | "dark";
+  className?: string;
 }
 
-const LogoComponent = ({ lang = "en", forceTheme }: LogoProps) => {
+const LogoComponent = ({ lang = "en", forceTheme, className }: LogoProps) => {
   const { theme: currentTheme } = useTheme();
   const [logoSrc, setLogoSrc] = useState("/logo_full_black.svg"); // Default logo
 
@@ -24,7 +25,7 @@ const LogoComponent = ({ lang = "en", forceTheme }: LogoProps) => {
   return (
     <Link
       href={`/${lang}`}
-      className="flex items-center space-x-2"
+      className={`flex items-center space-x-2 ${className || ""}`}
       aria-label="Go to home page"
     >
       <Image src={logoSrc} alt="SynVoice Logo" width={114} height={28} />

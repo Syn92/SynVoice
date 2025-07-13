@@ -87,9 +87,9 @@ const Features = ({ dict }: FeaturesProps) => {
       <div className="w-full max-w-7xl mx-auto mt-10 sm:mt-16 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8">
         {features.map((feature, index) => (
           <ScrollReveal key={feature.title} delay={index * 0.1}>
-            <div className="flex flex-col h-full bg-background border rounded-xl p-6 lg:p-8 hover:shadow-lg transition-shadow duration-300">
-              <div className="mb-4 h-12 w-12 flex items-center justify-center bg-muted rounded-xl">
-                <feature.icon className="h-6 w-6" />
+            <div className="group flex flex-col h-full rounded-xl p-6 lg:p-8 hover:bg-[#f7f3ec]/80 hover:scale-[1.02] transition-all duration-300">
+              <div className="mb-4 h-12 w-12 flex items-center justify-center bg-primary/10 rounded-xl group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-300">
+                <feature.icon className="h-6 w-6 text-primary" />
               </div>
               <h3 className="text-lg lg:text-xl font-bold font-montserrat mb-3 leading-tight">
                 {feature.title}
