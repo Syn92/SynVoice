@@ -1,3 +1,4 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { Separator } from "@/components/ui/separator";
@@ -7,6 +8,7 @@ import { NavMenu } from "./nav-menu";
 import LanguageSwitcher from "./language-switcher";
 import ThemeToggle from "../theme-toggle";
 import Link from "next/link";
+import { useState } from "react";
 
 interface NavigationSheetProps {
   dict: {
@@ -22,11 +24,19 @@ interface NavigationSheetProps {
   };
   lang: 'en' | 'fr';
   isHomePage?: boolean;
+  onOpenChange?: (open: boolean) => void;
 }
 
-export const NavigationSheet = ({ dict, lang, isHomePage = false }: NavigationSheetProps) => {
+export const NavigationSheet = ({ dict, lang, isHomePage = false, onOpenChange }: NavigationSheetProps) => {
+  const [open, setOpen] = useState(false);
+
+  const handleOpenChange = (newOpen: boolean) => {
+    setOpen(newOpen);
+    onOpenChange?.(newOpen);
+  };
+
   return (
-    <Sheet>
+    <Sheet open={open} onOpenChange={handleOpenChange}>
       <SheetTrigger asChild>
         <Button variant="outline" size="icon" className="rounded-full">
           <Menu />
@@ -37,12 +47,19 @@ export const NavigationSheet = ({ dict, lang, isHomePage = false }: NavigationSh
         <div className="flex flex-col h-full">
           <Logo />
           
-          <NavMenu dict={dict} lang={lang} isHomePage={isHomePage} orientation="vertical" className="mt-12" />
+          <NavMenu 
+            dict={dict} 
+            lang={lang} 
+            isHomePage={isHomePage} 
+            orientation="vertical" 
+            className="mt-12" 
+            onLinkClick={() => handleOpenChange(false)}
+          />
 
           <Separator className="my-6" />
           
           <div className="space-y-4">
-            <Button asChild className="w-full font-bold font-montserrat">
+            <Button asChild className="w-full font-bold font-montserrat" onClick={() => handleOpenChange(false)}>
               <Link href={`/${lang}/contact`}>{dict.navbar.bookDemo}</Link>
             </Button>
             

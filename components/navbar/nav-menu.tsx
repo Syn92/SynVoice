@@ -20,9 +20,10 @@ interface NavMenuProps extends NavigationMenuProps {
   };
   lang: 'en' | 'fr';
   isHomePage?: boolean;
+  onLinkClick?: () => void;
 }
 
-export const NavMenu = ({ dict, lang, isHomePage = false, ...props }: NavMenuProps) => {
+export const NavMenu = ({ dict, lang, isHomePage = false, onLinkClick, ...props }: NavMenuProps) => {
   const getNavLink = (anchor: string) => {
     return isHomePage ? `#${anchor}` : `/${lang}#${anchor}`;
   };
@@ -32,22 +33,22 @@ export const NavMenu = ({ dict, lang, isHomePage = false, ...props }: NavMenuPro
       <NavigationMenuList className="gap-6 space-x-0 data-[orientation=vertical]:flex-col data-[orientation=vertical]:items-start">
         <NavigationMenuItem>
           <NavigationMenuLink asChild>
-            <Link href={getNavLink('features')} className="font-semibold font-montserrat">{dict.navbar.navigation.features}</Link>
+            <Link href={getNavLink('features')} className="font-semibold font-montserrat" onClick={onLinkClick}>{dict.navbar.navigation.features}</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuLink asChild>
-            <Link href={getNavLink('usecases')} className="font-semibold font-montserrat">{dict.navbar.navigation.useCases}</Link>
+            <Link href={getNavLink('usecases')} className="font-semibold font-montserrat" onClick={onLinkClick}>{dict.navbar.navigation.useCases}</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuLink asChild>
-            <Link href={getNavLink('faq')} className="font-semibold font-montserrat">{dict.navbar.navigation.faq}</Link>
+            <Link href={getNavLink('faq')} className="font-semibold font-montserrat" onClick={onLinkClick}>{dict.navbar.navigation.faq}</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuLink asChild>
-            <Link href={getNavLink('testimonials')} className="font-semibold font-montserrat">{dict.navbar.navigation.testimonials}</Link>
+            <Link href={getNavLink('testimonials')} className="font-semibold font-montserrat" onClick={onLinkClick}>{dict.navbar.navigation.testimonials}</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
       </NavigationMenuList>
