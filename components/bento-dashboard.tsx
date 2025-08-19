@@ -5,7 +5,6 @@ import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { useEffect, useRef, useState, useLayoutEffect } from "react";
 import {
-  Activity,
   CheckCircle2,
   Clock,
   PhoneCall,
@@ -138,12 +137,13 @@ export default function BentoDashboard({ lang = "en", metrics }: BentoDashboardP
     <div ref={rootRef} className="relative w-full rounded-2xl border border-border/50 bg-background/60 backdrop-blur-sm shadow-[0_25px_80px_-15px_rgba(0,0,0,0.35)] p-4 sm:p-6">
       <div className="mb-4 flex items-center gap-2">
         <Badge className="rounded-full font-montserrat" style={{ backgroundColor: '#272a33', color: '#f7f3ec' }}>
-          {t.kpi} · {t.today}
+          {t.kpi}
         </Badge>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4 sm:gap-6">
-        <Card className="col-span-1 lg:col-span-2">
+      <div className="grid grid-cols-1 lg:grid-cols-6 lg:grid-rows-2 gap-4 lg:gap-6">
+        {/* Total calls - hero tile (wide) */}
+        <Card className="col-span-1 lg:col-span-4 lg:row-span-1">
           <CardHeader className="pb-2">
             <CardTitle className="flex items-center gap-2 text-base font-montserrat">
               <PhoneCall className="h-4 w-4 text-primary" /> {t.totalCalls}
@@ -152,42 +152,104 @@ export default function BentoDashboard({ lang = "en", metrics }: BentoDashboardP
           <CardContent className="pt-0">
             <div className="flex items-end justify-between">
               <div>
-                <div className={`text-3xl sm:text-4xl font-extrabold font-montserrat leading-none transition-opacity duration-300 ${started ? "opacity-100" : "opacity-0"}`}>
+                <div className={`text-4xl lg:text-5xl font-extrabold font-montserrat leading-none transition-opacity duration-300 ${started ? "opacity-100" : "opacity-0"}`}>
                   {animatedTotal.toLocaleString()}
                 </div>
                 <div className="mt-1 text-xs text-foreground/70 font-open-sans">
                   {deltaPctLabel}
                 </div>
               </div>
-              <div className="flex items-center gap-1 text-emerald-600 dark:text-emerald-400">
+              <div className="flex items-center gap-1 text-primary">
                 <TrendingUp className="h-4 w-4" />
                 <span className={`text-xs font-semibold transition-opacity duration-300 ${started ? "opacity-100" : "opacity-0"}`}>{animatedSuccessPct}%</span>
               </div>
             </div>
+            <div className="mt-4 h-2 w-full rounded-full bg-primary/10 overflow-hidden">
+              <div 
+                className="h-full bg-primary transition-all duration-700 ease-out"
+                style={{ width: `${Math.min(100, (animatedTotal / 2000) * 100)}%` }}
+              />
+            </div>
           </CardContent>
         </Card>
 
-        <Card className="col-span-1 lg:col-span-2">
+        {/* Success rate - tall vertical */}
+        <Card className="col-span-1 lg:col-span-2 lg:row-span-2">
           <CardHeader className="pb-2">
             <CardTitle className="flex items-center gap-2 text-base font-montserrat">
               <CheckCircle2 className="h-4 w-4 text-primary" /> {t.successRate}
             </CardTitle>
           </CardHeader>
-          <CardContent className="pt-0">
-            <div className="flex items-center justify-between">
-              <div className={`text-3xl sm:text-4xl font-extrabold font-montserrat leading-none transition-opacity duration-300 ${started ? "opacity-100" : "opacity-0"}`}>
+          <CardContent className="pt-0 flex flex-col h-full">
+            <div className="text-center mb-4">
+              <div className={`text-4xl lg:text-5xl font-extrabold font-montserrat leading-none transition-opacity duration-300 ${started ? "opacity-100" : "opacity-0"}`}>
                 {animatedSuccessPct}%
               </div>
-              <div className="flex-1 ml-4 h-2 rounded-full bg-primary/10 overflow-hidden">
-                <div
+              <div className="mt-3 w-full h-2 rounded-full bg-primary/10 overflow-hidden">
+                <div 
                   className="h-full bg-primary transition-all duration-700 ease-out"
-                  style={{ width: `${Math.min(100, Math.max(0, animatedSuccessPct))}%` }}
+                  style={{ width: `${animatedSuccessPct}%` }}
                 />
+              </div>
+            </div>
+            
+            <Separator className="my-3" />
+            
+            <div className="flex-1 space-y-3">
+              <div className="text-xs font-semibold text-foreground/60 font-montserrat mb-2">
+                {lang === "fr" ? "Exemples de requêtes" : "Sample queries"}
+              </div>
+              
+              {[
+                {
+                  icon: "🅿️",
+                  query: lang === "fr" ? "Parking disponible ?" : "Parking available?",
+                  delay: 200
+                },
+                {
+                  icon: "🥜",
+                  query: lang === "fr" ? "Allergènes menu" : "Menu allergens",
+                  delay: 400
+                },
+                {
+                  icon: "✅",
+                  query: lang === "fr" ? "Confirmation réservation" : "Booking confirmed",
+                  delay: 600
+                },
+                {
+                  icon: "🕐",
+                  query: lang === "fr" ? "Horaires d'ouverture" : "Opening hours",
+                  delay: 800
+                }
+              ].map((item, index) => (
+                <div 
+                  key={index}
+                  className={`flex items-center gap-2 p-2 rounded-lg bg-primary/5 border border-primary/10 transition-all duration-500 ${started ? "opacity-100 translate-x-0" : "opacity-0 translate-x-4"}`}
+                  style={{ transitionDelay: `${item.delay}ms` }}
+                >
+                  <span className="text-sm">{item.icon}</span>
+                  <span className="text-xs font-open-sans text-foreground/80 flex-1">
+                    {item.query}
+                  </span>
+                  <div className="w-2 h-2 rounded-full bg-primary/40"></div>
+                </div>
+              ))}
+            </div>
+            
+            <div className="mt-4 pt-3 border-t border-border/50">
+              <div className="flex justify-between items-center text-xs font-open-sans">
+                <span className="text-foreground/60">
+                  {lang === "fr" ? "Taux de résolution" : "Resolution rate"}
+                </span>
+                <span className={`font-semibold text-primary transition-opacity duration-500 ${started ? "opacity-100" : "opacity-0"}`} style={{ transitionDelay: "1000ms" }}>
+                  {animatedSuccessPct}%
+                </span>
               </div>
             </div>
           </CardContent>
         </Card>
 
+        {/* Avg duration */}
         <Card className="col-span-1 lg:col-span-2">
           <CardHeader className="pb-2">
             <CardTitle className="flex items-center gap-2 text-base font-montserrat">
@@ -195,13 +257,14 @@ export default function BentoDashboard({ lang = "en", metrics }: BentoDashboardP
             </CardTitle>
           </CardHeader>
           <CardContent className="pt-0">
-            <div className={`text-3xl sm:text-4xl font-extrabold font-montserrat leading-none transition-opacity duration-300 ${started ? "opacity-100" : "opacity-0"}`}>
+            <div className={`text-3xl lg:text-4xl font-extrabold font-montserrat leading-none transition-opacity duration-300 ${started ? "opacity-100" : "opacity-0"}`}>
               {formatDuration(animatedAvgSec, lang)}
             </div>
-            <div className={`mt-2 h-2 w-full rounded-full bg-gradient-to-r from-primary/20 via-primary/40 to-primary/20 ${started ? "animate-pulse [animation-duration:2s]" : ""}`} />
+            <div className={`mt-3 h-2 w-full rounded-full bg-gradient-to-r from-primary/20 via-primary/40 to-primary/20 ${started ? "animate-pulse [animation-duration:2s]" : ""}`} />
           </CardContent>
         </Card>
 
+        {/* Peak hour */}
         <Card className="col-span-1 lg:col-span-2">
           <CardHeader className="pb-2">
             <CardTitle className="flex items-center gap-2 text-base font-montserrat">
@@ -209,68 +272,18 @@ export default function BentoDashboard({ lang = "en", metrics }: BentoDashboardP
             </CardTitle>
           </CardHeader>
           <CardContent className="pt-0">
-            <div className="text-3xl sm:text-4xl font-extrabold font-montserrat leading-none">
+            <div className="text-3xl lg:text-4xl font-extrabold font-montserrat leading-none mb-3">
               {safeMetrics.peakHourLabel}
             </div>
-            <div className="mt-3 h-16 w-full flex items-end gap-1">
+            <div className="h-12 lg:h-16 w-full flex items-end gap-1">
               {bars.map((h, i) => (
                 <div
                   key={i}
                   className="flex-1 rounded-sm bg-primary/30 transition-[height] duration-700 ease-out"
-                  style={{ height: barsAnimated ? `${Math.max(8, h)}%` : "0%" }}
+                  style={{ height: barsAnimated ? `${Math.max(10, h)}%` : "0%" }}
                 />
               ))}
             </div>
-          </CardContent>
-        </Card>
-
-        <Card className="col-span-1 lg:col-span-2 hidden sm:block">
-          <CardHeader className="pb-2">
-            <CardTitle className="flex items-center gap-2 text-base font-montserrat">
-              <Activity className="h-4 w-4 text-primary" /> {t.summary}
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="pt-0">
-            <div className="text-sm font-open-sans text-foreground/80">
-              {lang === "fr"
-                ? "Démo assistant restaurant : réservations finalisées de bout en bout, menu et infos parking communiqués automatiquement, pic autour du service du soir."
-                : "Restaurant assistant demo: reservations completed end‑to‑end, menu and parking info shared automatically, peak booking window around dinner service."}
-            </div>
-            <Separator className="my-3" />
-            <div className="grid grid-cols-2 gap-3">
-              <div className="rounded-md border border-border/50 p-3">
-                <div className="text-xs text-foreground/60 font-open-sans">SLA</div>
-                <div className="mt-1 text-lg font-montserrat font-bold">99.2%</div>
-              </div>
-              <div className="rounded-md border border-border/50 p-3">
-                <div className="text-xs text-foreground/60 font-open-sans">IVR deflection</div>
-                <div className="mt-1 text-lg font-montserrat font-bold">42%</div>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-
-        <Card className="col-span-1 lg:col-span-2 hidden sm:block">
-          <CardHeader className="pb-2">
-            <CardTitle className="flex items-center gap-2 text-base font-montserrat">
-              <TrendingUp className="h-4 w-4 text-primary" /> {t.highlights}
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="pt-0">
-            <ul className="space-y-2 text-sm font-open-sans">
-              <li className="flex items-center gap-2">
-                <span className="h-2 w-2 rounded-full bg-emerald-500" />
-                {lang === "fr" ? "95% des réservations finalisées" : "95% reservations completed"}
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="h-2 w-2 rounded-full bg-primary" />
-                {lang === "fr" ? "Menu et infos parking partagés automatiquement" : "Menu and parking info shared automatically"}
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="h-2 w-2 rounded-full bg-amber-500" />
-                {lang === "fr" ? "Pic de réservations 19h–20h" : "Peak booking window 7–8 PM"}
-              </li>
-            </ul>
           </CardContent>
         </Card>
       </div>
