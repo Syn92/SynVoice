@@ -34,7 +34,6 @@ export default function FacebookPixelTracker() {
         const fbp = getCookie("_fbp");
 
         const isConfirmationPage = pathname?.includes("confirmation") || eventSourceUrl.includes("confirmation");
-        const isBookingPage = pathname?.includes("booking") || eventSourceUrl.includes("booking");
 
         let eventName = "ViewContent";
         let eventData: Record<string, any> = {

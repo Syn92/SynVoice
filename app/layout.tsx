@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { ThemeProvider } from "next-themes";
 import { Montserrat, Open_Sans } from "next/font/google";
@@ -148,7 +149,7 @@ export default function RootLayout({
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <meta name="apple-mobile-web-app-title" content="SynAI" />
         <link rel="manifest" href="/site.webmanifest" />
-        
+
         {/* Google Tag Manager */}
         <Script
           id="gtm-script"
@@ -175,14 +176,14 @@ export default function RootLayout({
       <body className={`${montserrat.variable} ${openSans.variable} antialiased`}>
         {/* Google Tag Manager (noscript) */}
         <noscript>
-          <iframe 
+          <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-5H62LC87"
-            height="0" 
-            width="0" 
-            style={{display:"none",visibility:"hidden"}}
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
           />
         </noscript>
-        
+
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           <TooltipProvider>{children}</TooltipProvider>
         </ThemeProvider>
@@ -190,7 +191,9 @@ export default function RootLayout({
         {/* SynAI AI Floating Widget - Available on all pages */}
         <FloatingAIIntegration />
         {/* Facebook Pixel Tracker - Tracks page views via Conversions API */}
-        <FacebookPixelTracker />
+        <Suspense fallback={null}>
+          <FacebookPixelTracker />
+        </Suspense>
       </body>
     </html>
   );
