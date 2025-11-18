@@ -5,6 +5,7 @@ import Script from "next/script";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next"
 import FloatingAIIntegration from "@/components/floating-ai-integration";
+import FacebookPixelTracker from "@/components/facebook-pixel-tracker";
 import { Metadata } from "next";
 
 const montserrat = Montserrat({
@@ -188,6 +189,8 @@ export default function RootLayout({
         <Analytics />
         {/* SynAI AI Floating Widget - Available on all pages */}
         <FloatingAIIntegration />
+        {/* Facebook Pixel Tracker - Tracks page views via Conversions API */}
+        <FacebookPixelTracker />
       </body>
     </html>
   );

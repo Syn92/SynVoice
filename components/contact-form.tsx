@@ -79,6 +79,23 @@ export default function ContactForm({ dict, lang }: ContactFormProps) {
       });
 
       if (response.ok) {
+        // Store form data in sessionStorage for Facebook tracking
+        try {
+          const email = formData.get('Email') as string;
+          const firstName = formData.get('First Name') as string;
+          const lastName = formData.get('Last Name') as string;
+          const phone = formData.get('Phone') as string;
+          const country = lang === 'fr' ? 'CA' : 'CA';
+          
+          if (email) sessionStorage.setItem('fb_contact_email', email);
+          if (firstName) sessionStorage.setItem('fb_contact_firstName', firstName);
+          if (lastName) sessionStorage.setItem('fb_contact_lastName', lastName);
+          if (phone) sessionStorage.setItem('fb_contact_phone', phone);
+          sessionStorage.setItem('fb_contact_country', country);
+        } catch (error) {
+          console.error('Error storing form data for tracking:', error);
+        }
+        
         // Redirect to confirmation page
         window.location.href = `/${lang}/confirmation`;
       } else {
