@@ -30,8 +30,13 @@ export default function FacebookPixelTracker() {
         const eventTime = Math.floor(Date.now() / 1000);
         const eventSourceUrl = typeof window !== "undefined" ? window.location.href : "";
         const userAgent = typeof navigator !== "undefined" ? navigator.userAgent : "";
-        const fbc = getCookie("_fbc");
+        let fbc = getCookie("_fbc");
         const fbp = getCookie("_fbp");
+        const fbclid = searchParams?.get("fbclid");
+
+        if (!fbc && fbclid) {
+          fbc = `fb.1.${Date.now()}.${fbclid}`;
+        }
 
         const isConfirmationPage = pathname?.includes("confirmation") || eventSourceUrl.includes("confirmation");
 
@@ -43,10 +48,11 @@ export default function FacebookPixelTracker() {
           userAgent,
           fbc: fbc || undefined,
           fbp: fbp || undefined,
+          fbclid: fbclid || undefined,
         };
 
         if (isConfirmationPage) {
-          eventName = "Contact";
+          eventName = "Schedule";
 
           const email = searchParams?.get("email") || getSessionStorage("fb_contact_email");
           const firstName = searchParams?.get("firstName") || getSessionStorage("fb_contact_firstName");
@@ -57,7 +63,7 @@ export default function FacebookPixelTracker() {
 
           eventData = {
             ...eventData,
-            eventName: "Contact",
+            eventName: "Schedule",
             email: email || undefined,
             firstName: firstName || undefined,
             lastName: lastName || undefined,
